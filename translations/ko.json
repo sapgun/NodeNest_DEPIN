@@ -119,5 +119,36 @@
     },
     "step": "단계",
     "of": "/"
+  },
+  "footer": {
+    "tagline": "블록체인 노드 실행을 위한 Web3 모듈형 엣지 컴퓨팅 디바이스",
+    "product": {
+      "title": "제품",
+      "features": "기능",
+      "pricing": "가격",
+      "roadmap": "로드맵",
+      "documentation": "문서"
+    },
+    "community": {
+      "title": "커뮤니티",
+      "discord": "디스코드",
+      "forum": "포럼",
+      "governance": "거버넌스",
+      "events": "이벤트"
+    },
+    "company": {
+      "title": "회사",
+      "about": "소개",
+      "careers": "채용",
+      "blog": "블로그",
+      "contact": "문의"
+    },
+    "newsletter": {
+      "title": "최신 소식 받기",
+      "description": "뉴스레터를 구독하여 최신 업데이트, 공지사항 및 독점 혜택을 받아보세요.",
+      "placeholder": "이메일 입력",
+      "button": "구독하기"
+    },
+    "rights": "모든 권리 보유."
   }
 }

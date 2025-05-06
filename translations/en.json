@@ -119,5 +119,36 @@
     },
     "step": "Step",
     "of": "of"
+  },
+  "footer": {
+    "tagline": "Web3 modular edge computing device for blockchain node execution",
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "roadmap": "Roadmap",
+      "documentation": "Documentation"
+    },
+    "community": {
+      "title": "Community",
+      "discord": "Discord",
+      "forum": "Forum",
+      "governance": "Governance",
+      "events": "Events"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About",
+      "careers": "Careers",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Subscribe to our newsletter for the latest updates, announcements, and exclusive offers.",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "rights": "All rights reserved."
   }
 }

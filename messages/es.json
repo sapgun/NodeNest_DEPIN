@@ -119,5 +119,36 @@
     },
     "step": "Paso",
     "of": "de"
+  },
+  "footer": {
+    "tagline": "Dispositivo modular de computación de borde Web3 para ejecución de nodos blockchain",
+    "product": {
+      "title": "Producto",
+      "features": "Características",
+      "pricing": "Precios",
+      "roadmap": "Hoja de ruta",
+      "documentation": "Documentación"
+    },
+    "community": {
+      "title": "Comunidad",
+      "discord": "Discord",
+      "forum": "Foro",
+      "governance": "Gobernanza",
+      "events": "Eventos"
+    },
+    "company": {
+      "title": "Empresa",
+      "about": "Acerca de",
+      "careers": "Carreras",
+      "blog": "Blog",
+      "contact": "Contacto"
+    },
+    "newsletter": {
+      "title": "Mantente actualizado",
+      "description": "Suscríbete a nuestro boletín para recibir las últimas actualizaciones, anuncios y ofertas exclusivas.",
+      "placeholder": "Ingresa tu correo electrónico",
+      "button": "Suscribirse"
+    },
+    "rights": "Todos los derechos reservados."
   }
 }

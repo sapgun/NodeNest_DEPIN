@@ -119,5 +119,36 @@
     },
     "step": "步骤",
     "of": "/"
+  },
+  "footer": {
+    "tagline": "用于区块链节点执行的Web3模块化边缘计算设备",
+    "product": {
+      "title": "产品",
+      "features": "功能",
+      "pricing": "价格",
+      "roadmap": "路线图",
+      "documentation": "文档"
+    },
+    "community": {
+      "title": "社区",
+      "discord": "Discord",
+      "forum": "论坛",
+      "governance": "治理",
+      "events": "活动"
+    },
+    "company": {
+      "title": "公司",
+      "about": "关于我们",
+      "careers": "招聘",
+      "blog": "博客",
+      "contact": "联系我们"
+    },
+    "newsletter": {
+      "title": "获取最新消息",
+      "description": "订阅我们的新闻通讯，获取最新更新、公告和独家优惠。",
+      "placeholder": "输入您的邮箱",
+      "button": "订阅"
+    },
+    "rights": "保留所有权利。"
   }
 }
