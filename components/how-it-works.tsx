@@ -90,6 +90,7 @@ export default function HowItWorks() {
                 width={600}
                 height={800}
                 className="w-full rounded-lg"
+                unoptimized
               />
             </div>
           </motion.div>

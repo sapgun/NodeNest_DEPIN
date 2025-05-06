@@ -69,6 +69,7 @@ export default function Navbar() {
                 height={40}
                 className="h-auto w-auto max-w-[150px]"
                 priority
+                unoptimized
               />
             </Link>
           </div>
@@ -107,6 +108,7 @@ export default function Navbar() {
               height={40}
               className="h-auto w-auto max-w-[150px]"
               priority
+              unoptimized
             />
           </Link>
         </div>

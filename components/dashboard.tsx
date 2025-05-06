@@ -48,6 +48,7 @@ export default function Dashboard() {
                 width={1200}
                 height={800}
                 className="w-full"
+                unoptimized
               />
             </motion.div>
           </TabsContent>
@@ -66,6 +67,7 @@ export default function Dashboard() {
                 width={1200}
                 height={800}
                 className="w-full"
+                unoptimized
               />
             </motion.div>
           </TabsContent>
@@ -84,6 +86,7 @@ export default function Dashboard() {
                 width={1200}
                 height={800}
                 className="w-full"
+                unoptimized
               />
             </motion.div>
           </TabsContent>

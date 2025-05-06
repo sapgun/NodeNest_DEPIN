@@ -49,6 +49,7 @@ export default function DeviceShowcase() {
               width={1000}
               height={400}
               className="rounded-xl"
+              unoptimized
             />
           </div>
         </motion.div>
@@ -84,6 +85,7 @@ export default function DeviceShowcase() {
                 width={400}
                 height={400}
                 className="h-auto max-w-full rounded-lg"
+                unoptimized
               />
             </div>
             <div className="text-center">
@@ -106,6 +108,7 @@ export default function DeviceShowcase() {
                 width={400}
                 height={400}
                 className="h-auto max-w-full rounded-lg"
+                unoptimized
               />
             </div>
             <div className="text-center">

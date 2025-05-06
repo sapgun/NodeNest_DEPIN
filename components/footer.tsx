@@ -15,6 +15,7 @@ export default function Footer() {
                 width={180}
                 height={60}
                 className="h-auto w-auto max-w-[180px]"
+                unoptimized
               />
             </div>
             <p className="mt-4 max-w-xs">Web3 modular edge computing device for blockchain node execution</p>

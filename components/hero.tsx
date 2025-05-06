@@ -66,6 +66,7 @@ export default function Hero() {
               width={600}
               height={600}
               className="w-full rounded-xl"
+              unoptimized
             />
           </motion.div>
         </div>

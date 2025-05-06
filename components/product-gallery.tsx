@@ -37,6 +37,7 @@ export default function ProductGallery() {
                 width={400}
                 height={400}
                 className="h-auto max-w-full rounded-lg"
+                unoptimized
               />
             </div>
             <div className="text-center">
@@ -79,6 +80,7 @@ export default function ProductGallery() {
                 width={400}
                 height={400}
                 className="h-auto max-w-full rounded-lg"
+                unoptimized
               />
             </div>
             <div className="text-center">
@@ -126,6 +128,7 @@ export default function ProductGallery() {
               width={1000}
               height={400}
               className="h-auto max-w-full rounded-lg"
+              unoptimized
             />
           </div>
           <div className="text-center">

@@ -36,6 +36,7 @@ export default function RewardsSection() {
               width={600}
               height={600}
               className="w-full"
+              unoptimized
             />
           </motion.div>
 
