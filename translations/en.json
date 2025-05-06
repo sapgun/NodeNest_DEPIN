@@ -1,0 +1,123 @@
+{
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "dashboard": "Dashboard",
+    "devices": "Devices",
+    "rewards": "Rewards",
+    "howItWorks": "How It Works",
+    "login": "Login",
+    "getStarted": "Get Started",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Omnichain Node Nesting Begins",
+    "description": "Run decentralized nodes on modular edge hardware. Earn rewards while supporting blockchain networks with our energy-efficient devices.",
+    "preOrder": "Pre-order Now",
+    "learnMore": "Learn More"
+  },
+  "products": {
+    "title": "Premium Hardware",
+    "description": "Engineered for reliability and performance with sleek, modern design",
+    "standard": {
+      "title": "NodeNest Standard",
+      "subtitle": "Graphite Edition",
+      "price": "70",
+      "priceLabel": "Alpha Test Price",
+      "features": {
+        "processing": "Standard processing power",
+        "nodes": "Support for up to 3 blockchain nodes",
+        "energy": "Energy-efficient design"
+      },
+      "button": "Pre-order Standard"
+    },
+    "plus": {
+      "title": "NodeNest Plus",
+      "subtitle": "Enterprise Configuration",
+      "price": "85",
+      "priceLabel": "Alpha Test Price",
+      "features": {
+        "processing": "Enhanced processing power",
+        "nodes": "Support for up to 5 blockchain nodes",
+        "cooling": "Premium cooling system",
+        "colors": "Multiple color options"
+      },
+      "button": "Pre-order Plus"
+    },
+    "plusEdition": {
+      "title": "NodeNest Plus Edition",
+      "subtitle": "Available in multiple colors"
+    }
+  },
+  "dashboard": {
+    "title": "Real-Time Dashboard",
+    "description": "Monitor your node performance, rewards, and network activity in real-time",
+    "tabs": {
+      "overview": "Overview",
+      "rewards": "Rewards",
+      "nodes": "Nodes"
+    },
+    "features": {
+      "monitoring": {
+        "title": "Real-time Monitoring",
+        "description": "Track node performance, rewards, and network activity as it happens"
+      },
+      "multichain": {
+        "title": "Multi-chain Support",
+        "description": "Run nodes for multiple blockchains simultaneously from one interface"
+      },
+      "updates": {
+        "title": "Automated Updates",
+        "description": "Software updates are automatically applied to keep your nodes running smoothly"
+      }
+    }
+  },
+  "devices": {
+    "title": "Choose Your Style",
+    "description": "NodeNest devices come in a range of colors to match your style and setup",
+    "colors": {
+      "graphite": "Graphite",
+      "silver": "Silver",
+      "mint": "Mint",
+      "cobalt": "Cobalt"
+    },
+    "colorDescriptions": {
+      "graphite": "Black",
+      "silver": "Silver",
+      "mint": "Mint green",
+      "cobalt": "Blue"
+    },
+    "standard": {
+      "title": "Standard & Plus Editions",
+      "description": "Multiple color options available"
+    },
+    "plus": {
+      "title": "Plus Edition with Display",
+      "description": "Real-time metrics at a glance"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "NodeNest makes running blockchain nodes simple and profitable",
+    "steps": {
+      "setup": {
+        "title": "Plug & Play Setup",
+        "description": "Connect your NodeNest device to power and internet. The device automatically configures itself."
+      },
+      "networks": {
+        "title": "Select Networks",
+        "description": "Choose which blockchain networks you want to support through the NodeNest dashboard."
+      },
+      "nodes": {
+        "title": "Run Nodes",
+        "description": "Your device begins validating transactions and supporting the blockchain networks you selected."
+      },
+      "rewards": {
+        "title": "Earn Rewards",
+        "description": "Receive NNT tokens and native chain rewards directly to your wallet for your contribution."
+      }
+    },
+    "step": "Step",
+    "of": "of"
+  }
+}

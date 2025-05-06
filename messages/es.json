@@ -1,0 +1,123 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "products": "Productos",
+    "dashboard": "Panel",
+    "devices": "Dispositivos",
+    "rewards": "Recompensas",
+    "howItWorks": "Cómo funciona",
+    "login": "Iniciar sesión",
+    "getStarted": "Comenzar",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "Comienza el anidamiento de nodos Omnichain",
+    "description": "Ejecuta nodos descentralizados en hardware modular de borde. Gana recompensas mientras apoyas redes blockchain con nuestros dispositivos energéticamente eficientes.",
+    "preOrder": "Pre-ordenar ahora",
+    "learnMore": "Saber más"
+  },
+  "products": {
+    "title": "Hardware Premium",
+    "description": "Diseñado para fiabilidad y rendimiento con un diseño elegante y moderno",
+    "standard": {
+      "title": "NodeNest Estándar",
+      "subtitle": "Edición Grafito",
+      "price": "70",
+      "priceLabel": "Precio de prueba Alpha",
+      "features": {
+        "processing": "Potencia de procesamiento estándar",
+        "nodes": "Soporte para hasta 3 nodos blockchain",
+        "energy": "Diseño energéticamente eficiente"
+      },
+      "button": "Pre-ordenar Estándar"
+    },
+    "plus": {
+      "title": "NodeNest Plus",
+      "subtitle": "Configuración Empresarial",
+      "price": "85",
+      "priceLabel": "Precio de prueba Alpha",
+      "features": {
+        "processing": "Potencia de procesamiento mejorada",
+        "nodes": "Soporte para hasta 5 nodos blockchain",
+        "cooling": "Sistema de refrigeración premium",
+        "colors": "Múltiples opciones de color"
+      },
+      "button": "Pre-ordenar Plus"
+    },
+    "plusEdition": {
+      "title": "NodeNest Edición Plus",
+      "subtitle": "Disponible en múltiples colores"
+    }
+  },
+  "dashboard": {
+    "title": "Panel en tiempo real",
+    "description": "Monitorea el rendimiento de tus nodos, recompensas y actividad de red en tiempo real",
+    "tabs": {
+      "overview": "Resumen",
+      "rewards": "Recompensas",
+      "nodes": "Nodos"
+    },
+    "features": {
+      "monitoring": {
+        "title": "Monitoreo en tiempo real",
+        "description": "Rastrea el rendimiento de los nodos, recompensas y actividad de red en tiempo real"
+      },
+      "multichain": {
+        "title": "Soporte multi-cadena",
+        "description": "Ejecuta nodos para múltiples blockchains simultáneamente desde una interfaz"
+      },
+      "updates": {
+        "title": "Actualizaciones automáticas",
+        "description": "Las actualizaciones de software se aplican automáticamente para mantener tus nodos funcionando sin problemas"
+      }
+    }
+  },
+  "devices": {
+    "title": "Elige tu estilo",
+    "description": "Los dispositivos NodeNest vienen en una variedad de colores para combinar con tu estilo y configuración",
+    "colors": {
+      "graphite": "Grafito",
+      "silver": "Plata",
+      "mint": "Menta",
+      "cobalt": "Cobalto"
+    },
+    "colorDescriptions": {
+      "graphite": "Negro",
+      "silver": "Plateado",
+      "mint": "Verde menta",
+      "cobalt": "Azul"
+    },
+    "standard": {
+      "title": "Ediciones Estándar y Plus",
+      "description": "Disponibles en múltiples opciones de color"
+    },
+    "plus": {
+      "title": "Edición Plus con pantalla",
+      "description": "Métricas en tiempo real de un vistazo"
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "description": "NodeNest hace que ejecutar nodos blockchain sea simple y rentable",
+    "steps": {
+      "setup": {
+        "title": "Configuración Plug & Play",
+        "description": "Conecta tu dispositivo NodeNest a la energía e internet. El dispositivo se configura automáticamente."
+      },
+      "networks": {
+        "title": "Selecciona redes",
+        "description": "Elige qué redes blockchain quieres apoyar a través del panel de NodeNest."
+      },
+      "nodes": {
+        "title": "Ejecuta nodos",
+        "description": "Tu dispositivo comienza a validar transacciones y apoyar las redes blockchain que seleccionaste."
+      },
+      "rewards": {
+        "title": "Gana recompensas",
+        "description": "Recibe tokens NNT y recompensas de cadena nativa directamente en tu billetera por tu contribución."
+      }
+    },
+    "step": "Paso",
+    "of": "de"
+  }
+}

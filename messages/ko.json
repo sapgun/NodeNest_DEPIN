@@ -1,0 +1,123 @@
+{
+  "navigation": {
+    "home": "홈",
+    "products": "제품",
+    "dashboard": "대시보드",
+    "devices": "디바이스",
+    "rewards": "보상",
+    "howItWorks": "작동 방식",
+    "login": "로그인",
+    "getStarted": "시작하기",
+    "language": "언어"
+  },
+  "hero": {
+    "title": "옴니체인 노드 네스팅이 시작됩니다",
+    "description": "모듈식 엣지 하드웨어에서 분산형 노드를 실행하세요. 에너지 효율적인 디바이스로 블록체인 네트워크를 지원하면서 보상을 받으세요.",
+    "preOrder": "사전 주문하기",
+    "learnMore": "더 알아보기"
+  },
+  "products": {
+    "title": "프리미엄 하드웨어",
+    "description": "세련된 현대적인 디자인으로 신뢰성과 성능을 위해 설계되었습니다",
+    "standard": {
+      "title": "NodeNest 스탠다드",
+      "subtitle": "그래파이트 에디션",
+      "price": "70",
+      "priceLabel": "알파 테스트 가격",
+      "features": {
+        "processing": "표준 처리 성능",
+        "nodes": "최대 3개의 블록체인 노드 지원",
+        "energy": "에너지 효율적인 디자인"
+      },
+      "button": "스탠다드 사전 주문"
+    },
+    "plus": {
+      "title": "NodeNest 플러스",
+      "subtitle": "엔터프라이즈 구성",
+      "price": "85",
+      "priceLabel": "알파 테스트 가격",
+      "features": {
+        "processing": "향상된 처리 성능",
+        "nodes": "최대 5개의 블록체인 노드 지원",
+        "cooling": "프리미엄 냉각 시스템",
+        "colors": "다양한 색상 옵션"
+      },
+      "button": "플러스 사전 주문"
+    },
+    "plusEdition": {
+      "title": "NodeNest 플러스 에디션",
+      "subtitle": "다양한 색상으로 제공"
+    }
+  },
+  "dashboard": {
+    "title": "실시간 대시보드",
+    "description": "노드 성능, 보상 및 네트워크 활동을 실시간으로 모니터링하세요",
+    "tabs": {
+      "overview": "개요",
+      "rewards": "보상",
+      "nodes": "노드"
+    },
+    "features": {
+      "monitoring": {
+        "title": "실시간 모니터링",
+        "description": "노드 성능, 보상 및 네트워크 활동을 실시간으로 추적"
+      },
+      "multichain": {
+        "title": "멀티체인 지원",
+        "description": "하나의 인터페이스에서 여러 블록체인 노드를 동시에 실행"
+      },
+      "updates": {
+        "title": "자동 업데이트",
+        "description": "소프트웨어 업데이트가 자동으로 적용되어 노드가 원활하게 실행됩니다"
+      }
+    }
+  },
+  "devices": {
+    "title": "스타일 선택",
+    "description": "NodeNest 디바이스는 사용자의 스타일과 설정에 맞는 다양한 색상으로 제공됩니다",
+    "colors": {
+      "graphite": "그래파이트",
+      "silver": "실버",
+      "mint": "민트",
+      "cobalt": "코발트"
+    },
+    "colorDescriptions": {
+      "graphite": "블랙",
+      "silver": "실버",
+      "mint": "민트 그린",
+      "cobalt": "블루"
+    },
+    "standard": {
+      "title": "스탠다드 & 플러스 에디션",
+      "description": "다양한 색상 옵션 제공"
+    },
+    "plus": {
+      "title": "디스플레이가 있는 플러스 에디션",
+      "description": "한눈에 보는 실시간 메트릭"
+    }
+  },
+  "howItWorks": {
+    "title": "작동 방식",
+    "description": "NodeNest는 블록체인 노드 실행을 간단하고 수익성 있게 만듭니다",
+    "steps": {
+      "setup": {
+        "title": "플러그 앤 플레이 설정",
+        "description": "NodeNest 디바이스를 전원과 인터넷에 연결하세요. 디바이스가 자동으로 구성됩니다."
+      },
+      "networks": {
+        "title": "네트워크 선택",
+        "description": "NodeNest 대시보드를 통해 지원하고자 하는 블록체인 네트워크를 선택하세요."
+      },
+      "nodes": {
+        "title": "노드 실행",
+        "description": "디바이스가 트랜잭션을 검증하고 선택한 블록체인 네트워크를 지원하기 시작합니다."
+      },
+      "rewards": {
+        "title": "보상 획득",
+        "description": "기여에 대한 NNT 토큰과 네이티브 체인 보상을 지갑으로 직접 받으세요."
+      }
+    },
+    "step": "단계",
+    "of": "/"
+  }
+}

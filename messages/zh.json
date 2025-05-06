@@ -1,0 +1,123 @@
+{
+  "navigation": {
+    "home": "首页",
+    "products": "产品",
+    "dashboard": "仪表板",
+    "devices": "设备",
+    "rewards": "奖励",
+    "howItWorks": "工作原理",
+    "login": "登录",
+    "getStarted": "开始使用",
+    "language": "语言"
+  },
+  "hero": {
+    "title": "全链节点嵌套开始",
+    "description": "在模块化边缘硬件上运行去中心化节点。使用我们的节能设备支持区块链网络的同时获得奖励。",
+    "preOrder": "预订",
+    "learnMore": "了解更多"
+  },
+  "products": {
+    "title": "高级硬件",
+    "description": "以时尚现代的设计为可靠性和性能而设计",
+    "standard": {
+      "title": "NodeNest 标准版",
+      "subtitle": "石墨版",
+      "price": "70",
+      "priceLabel": "Alpha测试价格",
+      "features": {
+        "processing": "标准处理能力",
+        "nodes": "支持最多3个区块链节点",
+        "energy": "节能设计"
+      },
+      "button": "预订标准版"
+    },
+    "plus": {
+      "title": "NodeNest Plus",
+      "subtitle": "企业配置",
+      "price": "85",
+      "priceLabel": "Alpha测试价格",
+      "features": {
+        "processing": "增强处理能力",
+        "nodes": "支持最多5个区块链节点",
+        "cooling": "高级冷却系统",
+        "colors": "多种颜色选择"
+      },
+      "button": "预订Plus版"
+    },
+    "plusEdition": {
+      "title": "NodeNest Plus版",
+      "subtitle": "提供多种颜色"
+    }
+  },
+  "dashboard": {
+    "title": "实时仪表板",
+    "description": "实时监控节点性能、奖励和网络活动",
+    "tabs": {
+      "overview": "概览",
+      "rewards": "奖励",
+      "nodes": "节点"
+    },
+    "features": {
+      "monitoring": {
+        "title": "实时监控",
+        "description": "实时跟踪节点性能、奖励和网络活动"
+      },
+      "multichain": {
+        "title": "多链支持",
+        "description": "通过一个界面同时运行多个区块链节点"
+      },
+      "updates": {
+        "title": "自动更新",
+        "description": "自动应用软件更新，保持节点平稳运行"
+      }
+    }
+  },
+  "devices": {
+    "title": "选择您的风格",
+    "description": "NodeNest设备提供多种颜色，以匹配您的风格和设置",
+    "colors": {
+      "graphite": "石墨",
+      "silver": "银色",
+      "mint": "薄荷",
+      "cobalt": "钴蓝"
+    },
+    "colorDescriptions": {
+      "graphite": "黑色",
+      "silver": "银色",
+      "mint": "薄荷绿",
+      "cobalt": "蓝色"
+    },
+    "standard": {
+      "title": "标准版和Plus版",
+      "description": "提供多种颜色选择"
+    },
+    "plus": {
+      "title": "带显示屏的Plus版",
+      "description": "一目了然的实时指标"
+    }
+  },
+  "howItWorks": {
+    "title": "工作原理",
+    "description": "NodeNest使运行区块链节点变得简单且有利可图",
+    "steps": {
+      "setup": {
+        "title": "即插即用设置",
+        "description": "将NodeNest设备连接到电源和互联网。设备会自动配置。"
+      },
+      "networks": {
+        "title": "选择网络",
+        "description": "通过NodeNest仪表板选择您想要支持的区块链网络。"
+      },
+      "nodes": {
+        "title": "运行节点",
+        "description": "您的设备开始验证交易并支持您选择的区块链网络。"
+      },
+      "rewards": {
+        "title": "获得奖励",
+        "description": "直接将NNT代币和原生链奖励接收到您的钱包中，以回报您的贡献。"
+      }
+    },
+    "step": "步骤",
+    "of": "/"
+  }
+}
