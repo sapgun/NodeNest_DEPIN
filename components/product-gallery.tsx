@@ -4,8 +4,11 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { DollarSign, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function ProductGallery() {
+  const { t } = useLanguage()
+
   return (
     <section id="products" className="bg-[#0c0f1a] py-24">
       <div className="container mx-auto px-4">
@@ -16,10 +19,8 @@ export default function ProductGallery() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Premium Hardware</h2>
-          <p className="mx-auto max-w-2xl text-gray-400">
-            Engineered for reliability and performance with sleek, modern design
-          </p>
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">{t("products.title")}</h2>
+          <p className="mx-auto max-w-2xl text-gray-400">{t("products.description")}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
@@ -41,28 +42,30 @@ export default function ProductGallery() {
               />
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-medium text-white">NodeNest Standard</h3>
-              <p className="text-gray-400">Graphite Edition</p>
+              <h3 className="text-xl font-medium text-white">{t("products.standard.title")}</h3>
+              <p className="text-gray-400">{t("products.standard.subtitle")}</p>
               <div className="mt-4 flex items-center justify-center text-2xl font-bold text-teal-500">
                 <DollarSign className="h-6 w-6" />
-                <span>70</span>
-                <span className="ml-1 text-sm font-normal text-gray-400">Alpha Test Price</span>
+                <span>{t("products.standard.price")}</span>
+                <span className="ml-1 text-sm font-normal text-gray-400">{t("products.standard.priceLabel")}</span>
               </div>
               <ul className="mt-4 space-y-2 text-left">
                 <li className="flex items-start">
                   <Check className="mr-2 h-5 w-5 text-teal-500" />
-                  <span className="text-gray-300">Standard processing power</span>
+                  <span className="text-gray-300">{t("products.standard.features.processing")}</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="mr-2 h-5 w-5 text-teal-500" />
-                  <span className="text-gray-300">Support for up to 3 blockchain nodes</span>
+                  <span className="text-gray-300">{t("products.standard.features.nodes")}</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="mr-2 h-5 w-5 text-teal-500" />
-                  <span className="text-gray-300">Energy-efficient design</span>
+                  <span className="text-gray-300">{t("products.standard.features.energy")}</span>
                 </li>
               </ul>
-              <Button className="mt-6 w-full bg-teal-500 text-black hover:bg-teal-600">Pre-order Standard</Button>
+              <Button className="mt-6 w-full bg-teal-500 text-black hover:bg-teal-600">
+                {t("products.standard.button")}
+              </Button>
             </div>
           </motion.div>
 
@@ -84,32 +87,34 @@ export default function ProductGallery() {
               />
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-medium text-white">NodeNest Plus</h3>
-              <p className="text-gray-400">Enterprise Configuration</p>
+              <h3 className="text-xl font-medium text-white">{t("products.plus.title")}</h3>
+              <p className="text-gray-400">{t("products.plus.subtitle")}</p>
               <div className="mt-4 flex items-center justify-center text-2xl font-bold text-teal-500">
                 <DollarSign className="h-6 w-6" />
-                <span>85</span>
-                <span className="ml-1 text-sm font-normal text-gray-400">Alpha Test Price</span>
+                <span>{t("products.plus.price")}</span>
+                <span className="ml-1 text-sm font-normal text-gray-400">{t("products.plus.priceLabel")}</span>
               </div>
               <ul className="mt-4 space-y-2 text-left">
                 <li className="flex items-start">
                   <Check className="mr-2 h-5 w-5 text-teal-500" />
-                  <span className="text-gray-300">Enhanced processing power</span>
+                  <span className="text-gray-300">{t("products.plus.features.processing")}</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="mr-2 h-5 w-5 text-teal-500" />
-                  <span className="text-gray-300">Support for up to 5 blockchain nodes</span>
+                  <span className="text-gray-300">{t("products.plus.features.nodes")}</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="mr-2 h-5 w-5 text-teal-500" />
-                  <span className="text-gray-300">Premium cooling system</span>
+                  <span className="text-gray-300">{t("products.plus.features.cooling")}</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="mr-2 h-5 w-5 text-teal-500" />
-                  <span className="text-gray-300">Multiple color options</span>
+                  <span className="text-gray-300">{t("products.plus.features.colors")}</span>
                 </li>
               </ul>
-              <Button className="mt-6 w-full bg-teal-500 text-black hover:bg-teal-600">Pre-order Plus</Button>
+              <Button className="mt-6 w-full bg-teal-500 text-black hover:bg-teal-600">
+                {t("products.plus.button")}
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -132,8 +137,8 @@ export default function ProductGallery() {
             />
           </div>
           <div className="text-center">
-            <h3 className="text-xl font-medium text-white">NodeNest Plus Edition</h3>
-            <p className="text-gray-400">Available in multiple colors</p>
+            <h3 className="text-xl font-medium text-white">{t("products.plusEdition.title")}</h3>
+            <p className="text-gray-400">{t("products.plusEdition.subtitle")}</p>
           </div>
         </motion.div>
       </div>

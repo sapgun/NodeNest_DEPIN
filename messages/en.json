@@ -96,6 +96,42 @@
       "description": "Real-time metrics at a glance"
     }
   },
+  "rewards": {
+    "title": "Rewards & Earnings",
+    "description": "Earn passive income by running blockchain nodes on your NodeNest device",
+    "balance": {
+      "label": "NodeNest Balance",
+      "value": "2,980 NNT",
+      "growth": "+7.2% from last week"
+    },
+    "earnings": {
+      "label": "72h Earnings",
+      "value": "105.24 NNT",
+      "approx": "≈ $315 at current rates"
+    },
+    "nodes": {
+      "label": "Active Nodes",
+      "value": "4 Nodes",
+      "status": "All nodes running optimally"
+    },
+    "roi": {
+      "label": "ROI Estimate",
+      "value": "4.2 months",
+      "timeframe": "Based on current rates"
+    },
+    "activity": {
+      "title": "Recent Activity",
+      "period": "Last 24 hours",
+      "table": {
+        "type": "Type",
+        "details": "Details",
+        "amount": "Amount"
+      },
+      "entries": {
+        "reward": "Cycle reward"
+      }
+    }
+  },
   "howItWorks": {
     "title": "How It Works",
     "description": "NodeNest makes running blockchain nodes simple and profitable",
@@ -119,6 +155,13 @@
     },
     "step": "Step",
     "of": "of"
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Subscribe to our newsletter for the latest NodeNest updates and announcements",
+    "placeholder": "Enter your email",
+    "button": "Subscribe",
+    "terms": "By subscribing, you agree to our Privacy Policy and Terms of Service."
   },
   "footer": {
     "tagline": "Web3 modular edge computing device for blockchain node execution",

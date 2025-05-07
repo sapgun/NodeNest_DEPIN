@@ -96,6 +96,42 @@
       "description": "한눈에 보는 실시간 메트릭"
     }
   },
+  "rewards": {
+    "title": "보상 & 수익",
+    "description": "NodeNest 디바이스에서 블록체인 노드를 실행하여 수동적 수입을 얻으세요",
+    "balance": {
+      "label": "NodeNest 잔액",
+      "value": "2,980 NNT",
+      "growth": "지난 주 대비 +7.2%"
+    },
+    "earnings": {
+      "label": "72시간 수익",
+      "value": "105.24 NNT",
+      "approx": "현재 시세로 약 $315"
+    },
+    "nodes": {
+      "label": "활성 노드",
+      "value": "4개 노드",
+      "status": "모든 노드 최적 상태로 실행 중"
+    },
+    "roi": {
+      "label": "투자수익률 예상",
+      "value": "4.2개월",
+      "timeframe": "현재 비율 기준"
+    },
+    "activity": {
+      "title": "최근 활동",
+      "period": "최근 24시간",
+      "table": {
+        "type": "유형",
+        "details": "세부 정보",
+        "amount": "금액"
+      },
+      "entries": {
+        "reward": "주기 보상"
+      }
+    }
+  },
   "howItWorks": {
     "title": "작동 방식",
     "description": "NodeNest는 블록체인 노드 실행을 간단하고 수익성 있게 만듭니다",
@@ -119,6 +155,13 @@
     },
     "step": "단계",
     "of": "/"
+  },
+  "newsletter": {
+    "title": "최신 정보 받기",
+    "description": "뉴스레터를 구독하여 NodeNest의 최신 업데이트 및 공지사항을 받아보세요",
+    "placeholder": "이메일 입력",
+    "button": "구독하기",
+    "terms": "구독함으로써, 개인정보 보호정책 및 서비스 약관에 동의합니다."
   },
   "footer": {
     "tagline": "블록체인 노드 실행을 위한 Web3 모듈형 엣지 컴퓨팅 디바이스",

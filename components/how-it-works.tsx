@@ -3,31 +3,34 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { CheckCircle2, Cpu, Database, Network, Wallet } from "lucide-react"
-
-const steps = [
-  {
-    icon: Cpu,
-    title: "Plug & Play Setup",
-    description: "Connect your NodeNest device to power and internet. The device automatically configures itself.",
-  },
-  {
-    icon: Network,
-    title: "Select Networks",
-    description: "Choose which blockchain networks you want to support through the NodeNest dashboard.",
-  },
-  {
-    icon: Database,
-    title: "Run Nodes",
-    description: "Your device begins validating transactions and supporting the blockchain networks you selected.",
-  },
-  {
-    icon: Wallet,
-    title: "Earn Rewards",
-    description: "Receive NNT tokens and native chain rewards directly to your wallet for your contribution.",
-  },
-]
+import { useLanguage } from "@/contexts/language-context"
 
 export default function HowItWorks() {
+  const { t } = useLanguage()
+
+  const steps = [
+    {
+      icon: Cpu,
+      title: t("howItWorks.steps.setup.title"),
+      description: t("howItWorks.steps.setup.description"),
+    },
+    {
+      icon: Network,
+      title: t("howItWorks.steps.networks.title"),
+      description: t("howItWorks.steps.networks.description"),
+    },
+    {
+      icon: Database,
+      title: t("howItWorks.steps.nodes.title"),
+      description: t("howItWorks.steps.nodes.description"),
+    },
+    {
+      icon: Wallet,
+      title: t("howItWorks.steps.rewards.title"),
+      description: t("howItWorks.steps.rewards.description"),
+    },
+  ]
+
   return (
     <section id="how-it-works" className="bg-[#0c0f1a] py-24">
       <div className="container mx-auto px-4">
@@ -38,10 +41,8 @@ export default function HowItWorks() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">How It Works</h2>
-          <p className="mx-auto max-w-2xl text-gray-400">
-            NodeNest makes running blockchain nodes simple and profitable
-          </p>
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">{t("howItWorks.title")}</h2>
+          <p className="mx-auto max-w-2xl text-gray-400">{t("howItWorks.description")}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
@@ -66,7 +67,7 @@ export default function HowItWorks() {
                       <div className="mt-4 flex items-center text-teal-400">
                         <CheckCircle2 className="mr-2 h-5 w-5" />
                         <span className="text-sm">
-                          Step {index + 1} of {steps.length}
+                          {t("howItWorks.step")} {index + 1} {t("howItWorks.of")} {steps.length}
                         </span>
                       </div>
                     )}

@@ -3,8 +3,11 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function Dashboard() {
+  const { t } = useLanguage()
+
   return (
     <section id="dashboard" className="bg-black py-24">
       <div className="container mx-auto px-4">
@@ -15,22 +18,20 @@ export default function Dashboard() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Real-Time Dashboard</h2>
-          <p className="mx-auto max-w-2xl text-gray-400">
-            Monitor your node performance, rewards, and network activity in real-time
-          </p>
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">{t("dashboard.title")}</h2>
+          <p className="mx-auto max-w-2xl text-gray-400">{t("dashboard.description")}</p>
         </motion.div>
 
         <Tabs defaultValue="overview" className="mx-auto max-w-5xl">
           <TabsList className="mx-auto mb-8 grid w-[400px] grid-cols-3">
             <TabsTrigger value="overview" className="data-[state=active]:bg-teal-500 data-[state=active]:text-black">
-              Overview
+              {t("dashboard.tabs.overview")}
             </TabsTrigger>
             <TabsTrigger value="rewards" className="data-[state=active]:bg-teal-500 data-[state=active]:text-black">
-              Rewards
+              {t("dashboard.tabs.rewards")}
             </TabsTrigger>
             <TabsTrigger value="nodes" className="data-[state=active]:bg-teal-500 data-[state=active]:text-black">
-              Nodes
+              {t("dashboard.tabs.nodes")}
             </TabsTrigger>
           </TabsList>
 
@@ -100,8 +101,8 @@ export default function Dashboard() {
             transition={{ duration: 0.5 }}
             className="rounded-xl bg-[#1a1d2c] p-6"
           >
-            <h3 className="mb-2 text-lg font-medium text-gray-300">Real-time Monitoring</h3>
-            <p className="text-gray-400">Track node performance, rewards, and network activity as it happens</p>
+            <h3 className="mb-2 text-lg font-medium text-gray-300">{t("dashboard.features.monitoring.title")}</h3>
+            <p className="text-gray-400">{t("dashboard.features.monitoring.description")}</p>
           </motion.div>
 
           <motion.div
@@ -111,8 +112,8 @@ export default function Dashboard() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="rounded-xl bg-[#1a1d2c] p-6"
           >
-            <h3 className="mb-2 text-lg font-medium text-gray-300">Multi-chain Support</h3>
-            <p className="text-gray-400">Run nodes for multiple blockchains simultaneously from one interface</p>
+            <h3 className="mb-2 text-lg font-medium text-gray-300">{t("dashboard.features.multichain.title")}</h3>
+            <p className="text-gray-400">{t("dashboard.features.multichain.description")}</p>
           </motion.div>
 
           <motion.div
@@ -122,10 +123,8 @@ export default function Dashboard() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="rounded-xl bg-[#1a1d2c] p-6"
           >
-            <h3 className="mb-2 text-lg font-medium text-gray-300">Automated Updates</h3>
-            <p className="text-gray-400">
-              Software updates are automatically applied to keep your nodes running smoothly
-            </p>
+            <h3 className="mb-2 text-lg font-medium text-gray-300">{t("dashboard.features.updates.title")}</h3>
+            <p className="text-gray-400">{t("dashboard.features.updates.description")}</p>
           </motion.div>
         </div>
       </div>

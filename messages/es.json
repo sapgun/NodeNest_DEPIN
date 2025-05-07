@@ -96,6 +96,42 @@
       "description": "Métricas en tiempo real de un vistazo"
     }
   },
+  "rewards": {
+    "title": "Recompensas y Ganancias",
+    "description": "Gana ingresos pasivos ejecutando nodos blockchain en tu dispositivo NodeNest",
+    "balance": {
+      "label": "Balance NodeNest",
+      "value": "2,980 NNT",
+      "growth": "+7.2% desde la semana pasada"
+    },
+    "earnings": {
+      "label": "Ganancias 72h",
+      "value": "105.24 NNT",
+      "approx": "≈ $315 a tasas actuales"
+    },
+    "nodes": {
+      "label": "Nodos Activos",
+      "value": "4 Nodos",
+      "status": "Todos los nodos funcionando óptimamente"
+    },
+    "roi": {
+      "label": "Estimación ROI",
+      "value": "4.2 meses",
+      "timeframe": "Basado en tasas actuales"
+    },
+    "activity": {
+      "title": "Actividad Reciente",
+      "period": "Últimas 24 horas",
+      "table": {
+        "type": "Tipo",
+        "details": "Detalles",
+        "amount": "Cantidad"
+      },
+      "entries": {
+        "reward": "Recompensa de ciclo"
+      }
+    }
+  },
   "howItWorks": {
     "title": "Cómo funciona",
     "description": "NodeNest hace que ejecutar nodos blockchain sea simple y rentable",
@@ -119,6 +155,13 @@
     },
     "step": "Paso",
     "of": "de"
+  },
+  "newsletter": {
+    "title": "Mantente Actualizado",
+    "description": "Suscríbete a nuestro boletín para recibir las últimas actualizaciones y anuncios de NodeNest",
+    "placeholder": "Ingresa tu correo electrónico",
+    "button": "Suscribirse",
+    "terms": "Al suscribirte, aceptas nuestra Política de Privacidad y Términos de Servicio."
   },
   "footer": {
     "tagline": "Dispositivo modular de computación de borde Web3 para ejecución de nodos blockchain",

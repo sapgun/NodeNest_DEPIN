@@ -2,15 +2,18 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-
-const devices = [
-  { name: "Graphite", color: "Black" },
-  { name: "Silver", color: "Silver" },
-  { name: "Mint", color: "Mint green" },
-  { name: "Cobalt", color: "Blue" },
-]
+import { useLanguage } from "@/contexts/language-context"
 
 export default function DeviceShowcase() {
+  const { t } = useLanguage()
+
+  const devices = [
+    { name: t("devices.colors.graphite"), color: t("devices.colorDescriptions.graphite") },
+    { name: t("devices.colors.silver"), color: t("devices.colorDescriptions.silver") },
+    { name: t("devices.colors.mint"), color: t("devices.colorDescriptions.mint") },
+    { name: t("devices.colors.cobalt"), color: t("devices.colorDescriptions.cobalt") },
+  ]
+
   return (
     <section id="devices" className="bg-[#0c0f1a] py-24">
       <div className="container mx-auto px-4">
@@ -22,7 +25,7 @@ export default function DeviceShowcase() {
             transition={{ duration: 0.5 }}
             className="mb-4 text-3xl font-bold text-white md:text-4xl"
           >
-            Choose Your Style
+            {t("devices.title")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -31,7 +34,7 @@ export default function DeviceShowcase() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mx-auto max-w-2xl text-gray-400"
           >
-            NodeNest devices come in a range of colors to match your style and setup
+            {t("devices.description")}
           </motion.p>
         </div>
 
@@ -89,8 +92,8 @@ export default function DeviceShowcase() {
               />
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-medium text-white">Standard & Plus Editions</h3>
-              <p className="text-gray-400">Multiple color options available</p>
+              <h3 className="text-xl font-medium text-white">{t("devices.standard.title")}</h3>
+              <p className="text-gray-400">{t("devices.standard.description")}</p>
             </div>
           </motion.div>
 
@@ -112,8 +115,8 @@ export default function DeviceShowcase() {
               />
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-medium text-white">Plus Edition with Display</h3>
-              <p className="text-gray-400">Real-time metrics at a glance</p>
+              <h3 className="text-xl font-medium text-white">{t("devices.plus.title")}</h3>
+              <p className="text-gray-400">{t("devices.plus.description")}</p>
             </div>
           </motion.div>
         </div>

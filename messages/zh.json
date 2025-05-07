@@ -96,6 +96,42 @@
       "description": "一目了然的实时指标"
     }
   },
+  "rewards": {
+    "title": "奖励和收益",
+    "description": "通过在NodeNest设备上运行区块链节点来赚取被动收入",
+    "balance": {
+      "label": "NodeNest余额",
+      "value": "2,980 NNT",
+      "growth": "比上周增长7.2%"
+    },
+    "earnings": {
+      "label": "72小时收益",
+      "value": "105.24 NNT",
+      "approx": "按当前汇率约$315"
+    },
+    "nodes": {
+      "label": "活跃节点",
+      "value": "4个节点",
+      "status": "所有节点运行良好"
+    },
+    "roi": {
+      "label": "ROI预估",
+      "value": "4.2个月",
+      "timeframe": "基于当前速率"
+    },
+    "activity": {
+      "title": "最近活动",
+      "period": "过去24小时",
+      "table": {
+        "type": "类型",
+        "details": "详情",
+        "amount": "金额"
+      },
+      "entries": {
+        "reward": "周期奖励"
+      }
+    }
+  },
   "howItWorks": {
     "title": "工作原理",
     "description": "NodeNest使运行区块链节点变得简单且有利可图",
@@ -119,6 +155,13 @@
     },
     "step": "步骤",
     "of": "/"
+  },
+  "newsletter": {
+    "title": "保持更新",
+    "description": "订阅我们的通讯以获取最新的NodeNest更新和公告",
+    "placeholder": "输入您的电子邮箱",
+    "button": "订阅",
+    "terms": "通过订阅，您同意我们的隐私政策和服务条款。"
   },
   "footer": {
     "tagline": "用于区块链节点执行的Web3模块化边缘计算设备",
