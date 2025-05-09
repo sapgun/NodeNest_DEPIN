@@ -193,5 +193,14 @@
       "button": "Subscribe"
     },
     "rights": "All rights reserved."
+  },
+  "uploader": {
+    "title": "Image Upload",
+    "description": "Upload images to showcase your NodeNest device",
+    "clickToUpload": "Click to upload",
+    "fileTypes": "PNG, JPG or GIF (max. 10MB)",
+    "uploading": "Uploading...",
+    "success": "Upload successful!",
+    "error": "Upload failed"
   }
 }

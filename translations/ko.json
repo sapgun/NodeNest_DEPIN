@@ -193,5 +193,14 @@
       "button": "구독하기"
     },
     "rights": "모든 권리 보유."
+  },
+  "uploader": {
+    "title": "이미지 업로드",
+    "description": "NodeNest 디바이스를 보여줄 이미지를 업로드하세요",
+    "clickToUpload": "클릭하여 업로드",
+    "fileTypes": "PNG, JPG 또는 GIF (최대 10MB)",
+    "uploading": "업로드 중...",
+    "success": "업로드 성공!",
+    "error": "업로드 실패"
   }
 }

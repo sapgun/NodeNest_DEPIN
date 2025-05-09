@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
-import ProductGallery from "@/components/product-gallery"
+import ProductGalleryEnhanced from "@/components/product-gallery-enhanced"
 import Dashboard from "@/components/dashboard"
 import DeviceShowcase from "@/components/device-showcase"
 import RewardsSection from "@/components/rewards-section"
@@ -13,7 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white">
       <Navbar />
       <Hero />
-      <ProductGallery />
+      <ProductGalleryEnhanced />
       <Dashboard />
       <DeviceShowcase />
       <RewardsSection />
