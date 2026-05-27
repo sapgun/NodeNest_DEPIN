@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "NodeNest - Web3 Modular Edge Computing Device",
   description: "Run decentralized nodes on modular edge hardware. Earn rewards while supporting blockchain networks.",
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
