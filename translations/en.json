@@ -6,15 +6,71 @@
     "devices": "Devices",
     "rewards": "Rewards",
     "howItWorks": "How It Works",
+    "architecture": "Architecture",
     "login": "Login",
     "getStarted": "Get Started",
+    "joinWaitlist": "Join Waitlist",
     "language": "Language"
   },
   "hero": {
     "title": "Omnichain Node Nesting Begins",
     "description": "Run decentralized nodes on modular edge hardware. Earn rewards while supporting blockchain networks with our energy-efficient devices.",
     "preOrder": "Pre-order Now",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "joinWaitlist": "Join Waitlist",
+    "viewArchitecture": "View Architecture",
+    "followBuildLog": "Follow Build Log"
+  },
+  "modularStack": {
+    "title": "Modular Edge Stack",
+    "description": "Stack compute, storage, and network modules to scale your decentralized node infrastructure."
+  },
+  "architecture": {
+    "badge": "System Architecture",
+    "title": "Architecture & Spec",
+    "description": "NodeNest is built as layered edge infrastructure — from modular hardware to on-chain reward tracking.",
+    "layers": {
+      "hardware": {
+        "title": "Hardware Layer",
+        "items": {
+          "edge": "Raspberry Pi / RK3588 class edge device",
+          "storage": "NVMe storage",
+          "modular": "Modular compute / storage / network modules"
+        }
+      },
+      "runtime": {
+        "title": "Node Runtime Layer",
+        "items": {
+          "docker": "Docker / K3s orchestration",
+          "clients": "Chain node clients",
+          "monitoring": "Monitoring agent",
+          "uptime": "Uptime reporter"
+        }
+      },
+      "network": {
+        "title": "Network Layer",
+        "items": {
+          "solana": "Solana",
+          "ethereum": "Ethereum",
+          "algorand": "Algorand",
+          "xrpl": "XRPL",
+          "avalanche": "Avalanche"
+        }
+      },
+      "reward": {
+        "title": "Reward Layer",
+        "items": {
+          "tracking": "Contribution tracking",
+          "uptime": "Uptime score",
+          "resource": "Resource score",
+          "dashboard": "Reward dashboard"
+        }
+      }
+    },
+    "buildLog": {
+      "title": "Follow the Build",
+      "description": "NodeNest is in active development. Join the waitlist for early builder access and follow our public build log."
+    }
   },
   "products": {
     "title": "Premium Hardware",
@@ -47,7 +103,8 @@
     "plusEdition": {
       "title": "NodeNest Plus Edition",
       "subtitle": "Available in multiple colors"
-    }
+    },
+    "joinWaitlist": "Join Waitlist"
   },
   "dashboard": {
     "title": "Real-Time Dashboard",
@@ -192,10 +249,10 @@
     "of": "of"
   },
   "newsletter": {
-    "title": "Stay Updated",
-    "description": "Subscribe to our newsletter for the latest NodeNest updates and announcements",
+    "title": "Join the Waitlist",
+    "description": "Get early builder access, hardware updates, and launch notifications. No pre-order required.",
     "placeholder": "Enter your email",
-    "button": "Subscribe",
+    "button": "Join Waitlist",
     "terms": "By subscribing, you agree to our Privacy Policy and Terms of Service."
   },
   "footer": {

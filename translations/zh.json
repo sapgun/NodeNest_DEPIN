@@ -6,15 +6,71 @@
     "devices": "设备",
     "rewards": "奖励",
     "howItWorks": "工作原理",
+    "architecture": "架构",
     "login": "登录",
     "getStarted": "开始使用",
+    "joinWaitlist": "加入候补名单",
     "language": "语言"
   },
   "hero": {
     "title": "全链节点嵌套开始",
     "description": "在模块化边缘硬件上运行去中心化节点。使用我们的节能设备支持区块链网络的同时获得奖励。",
     "preOrder": "预订",
-    "learnMore": "了解更多"
+    "learnMore": "了解更多",
+    "joinWaitlist": "加入候补名单",
+    "viewArchitecture": "查看架构",
+    "followBuildLog": "关注构建日志"
+  },
+  "modularStack": {
+    "title": "模块化边缘堆栈",
+    "description": "堆叠计算、存储和网络模块，扩展去中心化节点基础设施。"
+  },
+  "architecture": {
+    "badge": "系统架构",
+    "title": "架构与规格",
+    "description": "NodeNest 采用分层边缘基础设施，从模块化硬件到链上奖励追踪。",
+    "layers": {
+      "hardware": {
+        "title": "硬件层",
+        "items": {
+          "edge": "Raspberry Pi / RK3588 级边缘设备",
+          "storage": "NVMe 存储",
+          "modular": "模块化计算 / 存储 / 网络模块"
+        }
+      },
+      "runtime": {
+        "title": "节点运行时层",
+        "items": {
+          "docker": "Docker / K3s 编排",
+          "clients": "链节点客户端",
+          "monitoring": "监控代理",
+          "uptime": "运行时间报告"
+        }
+      },
+      "network": {
+        "title": "网络层",
+        "items": {
+          "solana": "Solana",
+          "ethereum": "Ethereum",
+          "algorand": "Algorand",
+          "xrpl": "XRPL",
+          "avalanche": "Avalanche"
+        }
+      },
+      "reward": {
+        "title": "奖励层",
+        "items": {
+          "tracking": "贡献追踪",
+          "uptime": "运行时间评分",
+          "resource": "资源评分",
+          "dashboard": "奖励仪表板"
+        }
+      }
+    },
+    "buildLog": {
+      "title": "关注构建进展",
+      "description": "NodeNest 正在积极开发中。加入候补名单获取早期构建者访问权限。"
+    }
   },
   "products": {
     "title": "高级硬件",
@@ -47,7 +103,8 @@
     "plusEdition": {
       "title": "NodeNest Plus版",
       "subtitle": "提供多种颜色"
-    }
+    },
+    "joinWaitlist": "加入候补名单"
   },
   "dashboard": {
     "title": "实时仪表板",
@@ -192,10 +249,10 @@
     "of": "/"
   },
   "newsletter": {
-    "title": "保持更新",
-    "description": "订阅我们的通讯以获取最新的NodeNest更新和公告",
+    "title": "加入候补名单",
+    "description": "获取早期构建者访问权限、硬件更新和发布通知。无需预订。",
     "placeholder": "输入您的电子邮箱",
-    "button": "订阅",
+    "button": "加入候补名单",
     "terms": "通过订阅，您同意我们的隐私政策和服务条款。"
   },
   "footer": {

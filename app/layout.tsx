@@ -7,8 +7,14 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "NodeNest - Web3 Modular Edge Computing Device",
-  description: "Run decentralized nodes on modular edge hardware. Earn rewards while supporting blockchain networks.",
-    generator: 'v0.app'
+  description:
+    "Modular DePIN edge hardware for running blockchain nodes. Join the waitlist for early builder access.",
+  openGraph: {
+    title: "NodeNest - Modular Edge Node Infrastructure",
+    description:
+      "Stack compute, storage, and network modules. Run Solana, Ethereum, and more at the edge.",
+    type: "website",
+  },
 }
 
 export default function RootLayout({

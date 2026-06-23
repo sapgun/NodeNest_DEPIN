@@ -7,6 +7,7 @@ import { DollarSign, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
 import { initialProductImages } from "@/lib/product-images"
+import { scrollToSection } from "@/lib/scroll-to"
 
 export default function ProductGalleryEnhanced() {
   const { t } = useLanguage()
@@ -125,8 +126,11 @@ export default function ProductGalleryEnhanced() {
                   <span className="text-gray-300">{t("products.standard.features.energy")}</span>
                 </li>
               </ul>
-              <Button className="mt-6 w-full bg-teal-500 text-black hover:bg-teal-600">
-                {t("products.standard.button")}
+              <Button
+                className="mt-6 w-full bg-teal-500 text-black hover:bg-teal-600"
+                onClick={() => scrollToSection("#newsletter")}
+              >
+                {t("products.joinWaitlist")}
               </Button>
             </div>
           </motion.div>
@@ -176,8 +180,11 @@ export default function ProductGalleryEnhanced() {
                   <span className="text-gray-300">{t("products.plus.features.colors")}</span>
                 </li>
               </ul>
-              <Button className="mt-6 w-full bg-teal-500 text-black hover:bg-teal-600">
-                {t("products.plus.button")}
+              <Button
+                className="mt-6 w-full bg-teal-500 text-black hover:bg-teal-600"
+                onClick={() => scrollToSection("#newsletter")}
+              >
+                {t("products.joinWaitlist")}
               </Button>
             </div>
           </motion.div>

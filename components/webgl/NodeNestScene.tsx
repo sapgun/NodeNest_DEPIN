@@ -1,6 +1,6 @@
 "use client"
 
-import { Suspense } from "react"
+import { Suspense, useEffect } from "react"
 import { Canvas } from "@react-three/fiber"
 import { Environment, Preload } from "@react-three/drei"
 import DeviceModel from "./DeviceModel"
@@ -10,10 +10,20 @@ import ScrollCameraRig from "./ScrollCameraRig"
 interface NodeNestSceneProps {
   reducedMotion?: boolean
   isMobile?: boolean
+  onReady?: () => void
+  onError?: () => void
 }
 
-function SceneContent({ reducedMotion, isMobile }: NodeNestSceneProps) {
-  const particleCount = isMobile ? 50 : 120
+function SceneReadyNotifier({ onReady }: { onReady?: () => void }) {
+  useEffect(() => {
+    onReady?.()
+  }, [onReady])
+
+  return null
+}
+
+function SceneContent({ reducedMotion, isMobile }: Pick<NodeNestSceneProps, "reducedMotion" | "isMobile">) {
+  const particleCount = isMobile ? 40 : 100
 
   return (
     <>
@@ -33,15 +43,31 @@ function SceneContent({ reducedMotion, isMobile }: NodeNestSceneProps) {
   )
 }
 
-export default function NodeNestScene({ reducedMotion = false, isMobile = false }: NodeNestSceneProps) {
+export default function NodeNestScene({
+  reducedMotion = false,
+  isMobile = false,
+  onReady,
+  onError,
+}: NodeNestSceneProps) {
   return (
     <Canvas
       camera={{ position: [0, 1.2, 6], fov: 42 }}
-      dpr={isMobile ? [1, 1] : [1, 1.7]}
-      gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
+      dpr={isMobile ? [1, 1] : [1, 1.5]}
+      gl={{
+        antialias: !isMobile,
+        alpha: true,
+        powerPreference: isMobile ? "low-power" : "high-performance",
+      }}
       style={{ background: "transparent" }}
+      onCreated={({ gl }) => {
+        gl.domElement.addEventListener("webglcontextlost", (event) => {
+          event.preventDefault()
+          onError?.()
+        })
+      }}
     >
       <Suspense fallback={null}>
+        <SceneReadyNotifier onReady={onReady} />
         <SceneContent reducedMotion={reducedMotion} isMobile={isMobile} />
       </Suspense>
     </Canvas>

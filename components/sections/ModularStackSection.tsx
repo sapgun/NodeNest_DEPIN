@@ -43,10 +43,10 @@ export default function ModularStackSection() {
             className="mb-12 text-center"
           >
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
-              Modular Edge Stack
+              {t("modularStack.title")}
             </h2>
             <p className="mx-auto max-w-2xl text-gray-400">
-              Stack compute, storage, and network modules to scale your decentralized node infrastructure.
+              {t("modularStack.description")}
             </p>
           </motion.div>
 

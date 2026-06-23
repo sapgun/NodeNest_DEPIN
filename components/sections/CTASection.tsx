@@ -12,7 +12,7 @@ export default function CTASection() {
   const reducedMotion = useReducedMotion()
 
   return (
-    <section id="newsletter" className="bg-black py-24">
+    <section id="newsletter" aria-labelledby="waitlist-heading" className="bg-black py-24">
       <div className="container mx-auto px-4">
         <motion.div
           initial={reducedMotion ? false : { opacity: 0, y: 30 }}
@@ -31,7 +31,7 @@ export default function CTASection() {
             <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-500/20">
               <Bell className="h-8 w-8 text-teal-400" />
             </div>
-            <h2 className="mb-2 text-2xl font-bold text-white md:text-3xl">{t("newsletter.title")}</h2>
+            <h2 id="waitlist-heading" className="mb-2 text-2xl font-bold text-white md:text-3xl">{t("newsletter.title")}</h2>
             <p className="text-gray-400">{t("newsletter.description")}</p>
           </motion.div>
 

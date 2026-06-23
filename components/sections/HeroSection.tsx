@@ -1,11 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, BookOpen, Rss } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
 import { useReducedMotion } from "@/lib/use-reduced-motion"
+import { scrollToSection } from "@/lib/scroll-to"
 import NodeNestHeroCanvas from "@/components/webgl/NodeNestHeroCanvas"
+import Link from "next/link"
 
 const textVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -60,16 +62,35 @@ export default function HeroSection() {
               initial="hidden"
               animate="visible"
               variants={textVariants}
-              className="flex flex-col items-center justify-center gap-4 sm:flex-row md:justify-start"
+              className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap md:justify-start"
             >
               <motion.div whileHover={reducedMotion ? {} : { scale: 1.02 }} whileTap={reducedMotion ? {} : { scale: 0.98 }}>
-                <Button size="lg" className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
-                  {t("hero.preOrder")}
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white"
+                  onClick={() => scrollToSection("#newsletter")}
+                >
+                  {t("hero.joinWaitlist")}
                 </Button>
               </motion.div>
               <motion.div whileHover={reducedMotion ? {} : { scale: 1.02 }} whileTap={reducedMotion ? {} : { scale: 0.98 }}>
-                <Button variant="outline" size="lg" className="border-teal-500 text-teal-500">
-                  {t("hero.learnMore")} <ArrowRight className="ml-2 h-4 w-4" />
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-teal-500 text-teal-500"
+                  onClick={() => scrollToSection("#architecture")}
+                >
+                  <BookOpen className="mr-2 h-4 w-4" />
+                  {t("hero.viewArchitecture")}
+                </Button>
+              </motion.div>
+              <motion.div whileHover={reducedMotion ? {} : { scale: 1.02 }} whileTap={reducedMotion ? {} : { scale: 0.98 }}>
+                <Button variant="ghost" size="lg" className="text-gray-400 hover:text-teal-400" asChild>
+                  <Link href="/community">
+                    <Rss className="mr-2 h-4 w-4" />
+                    {t("hero.followBuildLog")}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </motion.div>
             </motion.div>

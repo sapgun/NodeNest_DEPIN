@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar"
 import HeroSection from "@/components/sections/HeroSection"
+import ArchitectureSpecSection from "@/components/sections/ArchitectureSpecSection"
 import ModularStackSection from "@/components/sections/ModularStackSection"
 import NetworkLayerSection from "@/components/sections/NetworkLayerSection"
 import DeviceShowcase from "@/components/device-showcase"
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white">
       <Navbar />
       <HeroSection />
+      <ArchitectureSpecSection />
       <ModularStackSection />
       <NetworkLayerSection />
       <DeviceShowcase />

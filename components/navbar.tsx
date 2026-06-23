@@ -8,6 +8,7 @@ import Image from "next/image"
 import { Menu, X, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { languages, useLanguage } from "@/contexts/language-context"
+import { scrollToSection } from "@/lib/scroll-to"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 export default function Navbar() {
@@ -22,6 +23,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: t("navigation.home"), href: "#hero" },
+    { name: t("navigation.architecture"), href: "#architecture" },
     { name: t("navigation.products"), href: "#products" },
     { name: t("navigation.dashboard"), href: "#dashboard" },
     { name: t("navigation.devices"), href: "#devices" },
@@ -84,7 +86,12 @@ export default function Navbar() {
             <Button variant="ghost" className="text-gray-300">
               {t("navigation.login")}
             </Button>
-            <Button className="bg-teal-500 text-black">{t("navigation.getStarted")}</Button>
+            <Button
+              className="bg-teal-500 text-black"
+              onClick={() => scrollToSection("#newsletter")}
+            >
+              {t("navigation.joinWaitlist")}
+            </Button>
           </div>
           <div className="flex md:hidden">
             <Button variant="ghost" size="sm" className="text-gray-300">
@@ -152,7 +159,12 @@ export default function Navbar() {
           <Button variant="ghost" className="text-gray-300 hover:text-white">
             {t("navigation.login")}
           </Button>
-          <Button className="bg-teal-500 text-black hover:bg-teal-600">{t("navigation.getStarted")}</Button>
+          <Button
+            className="bg-teal-500 text-black hover:bg-teal-600"
+            onClick={() => scrollToSection("#newsletter")}
+          >
+            {t("navigation.joinWaitlist")}
+          </Button>
         </div>
 
         {/* Mobile menu button */}
@@ -230,7 +242,12 @@ export default function Navbar() {
               <Button variant="ghost" className="w-full justify-start text-gray-300 hover:text-white">
                 {t("navigation.login")}
               </Button>
-              <Button className="w-full bg-teal-500 text-black hover:bg-teal-600">{t("navigation.getStarted")}</Button>
+              <Button
+                className="w-full bg-teal-500 text-black hover:bg-teal-600"
+                onClick={() => scrollToSection("#newsletter")}
+              >
+                {t("navigation.joinWaitlist")}
+              </Button>
             </div>
           </div>
         </div>

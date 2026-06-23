@@ -6,15 +6,71 @@
     "devices": "Dispositivos",
     "rewards": "Recompensas",
     "howItWorks": "Cómo funciona",
+    "architecture": "Arquitectura",
     "login": "Iniciar sesión",
     "getStarted": "Comenzar",
+    "joinWaitlist": "Unirse a la lista",
     "language": "Idioma"
   },
   "hero": {
     "title": "Comienza el anidamiento de nodos Omnichain",
     "description": "Ejecuta nodos descentralizados en hardware modular de borde. Gana recompensas mientras apoyas redes blockchain con nuestros dispositivos energéticamente eficientes.",
     "preOrder": "Pre-ordenar ahora",
-    "learnMore": "Saber más"
+    "learnMore": "Saber más",
+    "joinWaitlist": "Unirse a la lista",
+    "viewArchitecture": "Ver arquitectura",
+    "followBuildLog": "Seguir el build log"
+  },
+  "modularStack": {
+    "title": "Stack Edge Modular",
+    "description": "Apila módulos de cómputo, almacenamiento y red para escalar tu infraestructura de nodos."
+  },
+  "architecture": {
+    "badge": "Arquitectura del sistema",
+    "title": "Arquitectura y especificaciones",
+    "description": "NodeNest está construido como infraestructura edge en capas, desde hardware modular hasta recompensas on-chain.",
+    "layers": {
+      "hardware": {
+        "title": "Capa de hardware",
+        "items": {
+          "edge": "Dispositivo edge clase Raspberry Pi / RK3588",
+          "storage": "Almacenamiento NVMe",
+          "modular": "Módulos modulares de cómputo / almacenamiento / red"
+        }
+      },
+      "runtime": {
+        "title": "Capa de runtime de nodos",
+        "items": {
+          "docker": "Orquestación Docker / K3s",
+          "clients": "Clientes de nodos de cadena",
+          "monitoring": "Agente de monitoreo",
+          "uptime": "Reporte de uptime"
+        }
+      },
+      "network": {
+        "title": "Capa de red",
+        "items": {
+          "solana": "Solana",
+          "ethereum": "Ethereum",
+          "algorand": "Algorand",
+          "xrpl": "XRPL",
+          "avalanche": "Avalanche"
+        }
+      },
+      "reward": {
+        "title": "Capa de recompensas",
+        "items": {
+          "tracking": "Seguimiento de contribución",
+          "uptime": "Puntuación de uptime",
+          "resource": "Puntuación de recursos",
+          "dashboard": "Panel de recompensas"
+        }
+      }
+    },
+    "buildLog": {
+      "title": "Sigue el desarrollo",
+      "description": "NodeNest está en desarrollo activo. Únete a la lista de espera para acceso anticipado."
+    }
   },
   "products": {
     "title": "Hardware Premium",
@@ -47,7 +103,8 @@
     "plusEdition": {
       "title": "NodeNest Edición Plus",
       "subtitle": "Disponible en múltiples colores"
-    }
+    },
+    "joinWaitlist": "Unirse a la lista"
   },
   "dashboard": {
     "title": "Panel en tiempo real",
@@ -192,10 +249,10 @@
     "of": "de"
   },
   "newsletter": {
-    "title": "Mantente Actualizado",
-    "description": "Suscríbete a nuestro boletín para recibir las últimas actualizaciones y anuncios de NodeNest",
+    "title": "Unirse a la lista de espera",
+    "description": "Acceso anticipado para builders, actualizaciones de hardware y avisos de lanzamiento. Sin pre-orden.",
     "placeholder": "Ingresa tu correo electrónico",
-    "button": "Suscribirse",
+    "button": "Unirse a la lista",
     "terms": "Al suscribirte, aceptas nuestra Política de Privacidad y Términos de Servicio."
   },
   "footer": {
