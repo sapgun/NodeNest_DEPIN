@@ -84,7 +84,7 @@ export default function ArchitectureSpecSection() {
   ]
 
   return (
-    <section id="architecture" className="bg-[#0c0f1a] py-24">
+    <section id="architecture" aria-labelledby="architecture-heading" className="bg-[#0c0f1a] py-24">
       <div className="container mx-auto px-4">
         <motion.div
           initial={reducedMotion ? false : { opacity: 0, y: 20 }}
@@ -97,7 +97,7 @@ export default function ArchitectureSpecSection() {
             <Layers className="h-4 w-4" />
             {t("architecture.badge")}
           </div>
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">{t("architecture.title")}</h2>
+          <h2 id="architecture-heading" className="mb-4 text-3xl font-bold text-white md:text-4xl">{t("architecture.title")}</h2>
           <p className="mx-auto max-w-2xl text-gray-400">{t("architecture.description")}</p>
         </motion.div>
 

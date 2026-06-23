@@ -57,17 +57,8 @@ function useIsMobile(): boolean {
   return isMobile
 }
 
-function FallbackContainer({ children, hint }: { children: ReactNode; hint?: boolean }) {
-  return (
-    <div className="relative h-[280px] w-full md:h-[480px]">
-      {children}
-      {hint && (
-        <p className="pointer-events-none absolute bottom-3 left-0 right-0 text-center text-xs text-gray-600">
-          {/* filled by WebGLFallback when needed */}
-        </p>
-      )}
-    </div>
-  )
+function FallbackContainer({ children }: { children: ReactNode }) {
+  return <div className="relative h-[280px] w-full md:h-[480px]">{children}</div>
 }
 
 export default function NodeNestHeroCanvas() {
@@ -104,7 +95,7 @@ export default function NodeNestHeroCanvas() {
 
   if (!mounted || webglSupported === null) {
     return (
-      <FallbackContainer hint>
+      <FallbackContainer>
         <WebGLFallback showLoadingHint />
       </FallbackContainer>
     )

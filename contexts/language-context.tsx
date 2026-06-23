@@ -3,7 +3,6 @@
 import type React from "react"
 import { createContext, useContext, useState, useEffect } from "react"
 
-// 동적 import 대신 모든 번역 파일을 정적으로 import
 import enTranslations from "../translations/en.json"
 import koTranslations from "../translations/ko.json"
 import zhTranslations from "../translations/zh.json"
@@ -24,7 +23,7 @@ export const languages: Language[] = [
 ]
 
 type Translations = {
-  [key: string]: any
+  [key: string]: unknown
 }
 
 type LanguageContextType = {
@@ -35,8 +34,7 @@ type LanguageContextType = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-// 모든 번역을 미리 로드
-const translationsMap = {
+const translationsMap: Record<string, Translations> = {
   en: enTranslations,
   ko: koTranslations,
   zh: zhTranslations,
@@ -46,62 +44,46 @@ const translationsMap = {
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [currentLanguage, setCurrentLanguage] = useState<Language>(languages[0])
-  const [translations, setTranslations] = useState<Translations>({})
-  const [isLoading, setIsLoading] = useState(true)
+  const [translations, setTranslations] = useState<Translations>(translationsMap.en)
 
   useEffect(() => {
-    // Check if there's a saved language preference in localStorage
     const savedLanguage = localStorage.getItem("language")
     if (savedLanguage) {
       const lang = languages.find((l) => l.code === savedLanguage)
-      if (lang) {
-        setCurrentLanguage(lang)
-      }
+      if (lang) setCurrentLanguage(lang)
     }
-    setIsLoading(false)
   }, [])
 
-  // loadTranslations 함수 수정
   useEffect(() => {
-    if (!isLoading) {
-      // 동적 로딩 대신 미리 로드된 번역 사용
-      setTranslations(translationsMap[currentLanguage.code] || translationsMap.en)
-      // Save language preference to localStorage
-      localStorage.setItem("language", currentLanguage.code)
-    }
-  }, [currentLanguage, isLoading])
+    setTranslations(translationsMap[currentLanguage.code] || translationsMap.en)
+    localStorage.setItem("language", currentLanguage.code)
+  }, [currentLanguage])
 
   const setLanguage = (code: string) => {
     const lang = languages.find((l) => l.code === code)
-    if (lang) {
-      setCurrentLanguage(lang)
-    }
+    if (lang) setCurrentLanguage(lang)
   }
 
-  // Translation function
   const t = (key: string): string => {
-    // Split the key by dots to access nested properties
     const keys = key.split(".")
-    let result = translations
+    let result: unknown = translations
 
-    // Navigate through the nested properties
     for (const k of keys) {
-      if (result && result[k] !== undefined) {
-        result = result[k]
+      if (result && typeof result === "object" && k in (result as object)) {
+        result = (result as Record<string, unknown>)[k]
       } else {
-        console.warn(`Translation key not found: ${key}`)
-        return key // Return the key itself if translation not found
+        return key
       }
     }
 
-    return result as string
+    return typeof result === "string" ? result : key
   }
 
-  if (isLoading) {
-    return null // Or a loading spinner
-  }
-
-  return <LanguageContext.Provider value={{ currentLanguage, setLanguage, t }}>{children}</LanguageContext.Provider>
+  return (
+    <LanguageContext.Provider value={{ currentLanguage, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  )
 }
 
 export const useLanguage = () => {

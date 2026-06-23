@@ -31,22 +31,15 @@ export default function Navbar() {
     { name: t("navigation.howItWorks"), href: "#how-it-works" },
   ]
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     setMobileMenuOpen(false)
+    scrollToSection(href)
+  }
 
-    try {
-      const element = document.querySelector(href)
-      if (element) {
-        const offsetTop = element.getBoundingClientRect().top + window.scrollY
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth",
-        })
-      }
-    } catch (error) {
-      console.error("Error scrolling to section:", error)
-    }
+  const handleWaitlistClick = () => {
+    setMobileMenuOpen(false)
+    scrollToSection("#newsletter")
   }
 
   const changeLanguage = (languageCode: string) => {
@@ -83,9 +76,6 @@ export default function Navbar() {
             ))}
           </div>
           <div className="hidden md:flex md:items-center md:gap-x-4">
-            <Button variant="ghost" className="text-gray-300">
-              {t("navigation.login")}
-            </Button>
             <Button
               className="bg-teal-500 text-black"
               onClick={() => scrollToSection("#newsletter")}
@@ -126,7 +116,7 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
+              onClick={(e) => handleNavLinkClick(e, link.href)}
               className="text-sm text-gray-300 transition-colors hover:text-teal-400"
             >
               {link.name}
@@ -156,12 +146,9 @@ export default function Navbar() {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button variant="ghost" className="text-gray-300 hover:text-white">
-            {t("navigation.login")}
-          </Button>
           <Button
             className="bg-teal-500 text-black hover:bg-teal-600"
-            onClick={() => scrollToSection("#newsletter")}
+            onClick={handleWaitlistClick}
           >
             {t("navigation.joinWaitlist")}
           </Button>
@@ -213,7 +200,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
+                onClick={(e) => handleNavLinkClick(e, link.href)}
                 className="block rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-800 hover:text-white"
               >
                 {link.name}
@@ -239,12 +226,9 @@ export default function Navbar() {
                   </button>
                 ))}
               </div>
-              <Button variant="ghost" className="w-full justify-start text-gray-300 hover:text-white">
-                {t("navigation.login")}
-              </Button>
               <Button
                 className="w-full bg-teal-500 text-black hover:bg-teal-600"
-                onClick={() => scrollToSection("#newsletter")}
+                onClick={handleWaitlistClick}
               >
                 {t("navigation.joinWaitlist")}
               </Button>

@@ -19,7 +19,13 @@
     "learnMore": "Saber más",
     "joinWaitlist": "Unirse a la lista",
     "viewArchitecture": "Ver arquitectura",
-    "followBuildLog": "Seguir el build log"
+    "followBuildLog": "Seguir el build log",
+    "trust": {
+      "label": "Capacidades de NodeNest",
+      "edge": "Hardware edge-native",
+      "multichain": "Multi-chain ready",
+      "modular": "Stack modular"
+    }
   },
   "modularStack": {
     "title": "Stack Edge Modular",
@@ -104,7 +110,8 @@
       "title": "NodeNest Edición Plus",
       "subtitle": "Disponible en múltiples colores"
     },
-    "joinWaitlist": "Unirse a la lista"
+    "joinWaitlist": "Unirse a la lista",
+    "waitlistNote": "Precio de acceso anticipado — únete a la lista de espera"
   },
   "dashboard": {
     "title": "Panel en tiempo real",
@@ -253,6 +260,8 @@
     "description": "Acceso anticipado para builders, actualizaciones de hardware y avisos de lanzamiento. Sin pre-orden.",
     "placeholder": "Ingresa tu correo electrónico",
     "button": "Unirse a la lista",
+    "success": "Estás en la lista de espera. Te enviaremos acceso anticipado para builders y novedades del lanzamiento.",
+    "invalidEmail": "Introduce una dirección de correo electrónico válida.",
     "terms": "Al suscribirte, aceptas nuestra Política de Privacidad y Términos de Servicio."
   },
   "footer": {

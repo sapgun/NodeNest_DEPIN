@@ -19,7 +19,13 @@
     "learnMore": "了解更多",
     "joinWaitlist": "加入候补名单",
     "viewArchitecture": "查看架构",
-    "followBuildLog": "关注构建日志"
+    "followBuildLog": "关注构建日志",
+    "trust": {
+      "label": "NodeNest 核心能力",
+      "edge": "边缘原生硬件",
+      "multichain": "多链就绪",
+      "modular": "模块化堆栈"
+    }
   },
   "modularStack": {
     "title": "模块化边缘堆栈",
@@ -104,7 +110,8 @@
       "title": "NodeNest Plus版",
       "subtitle": "提供多种颜色"
     },
-    "joinWaitlist": "加入候补名单"
+    "joinWaitlist": "加入候补名单",
+    "waitlistNote": "早期访问价格 — 加入候补名单获取发布更新"
   },
   "dashboard": {
     "title": "实时仪表板",
@@ -253,6 +260,8 @@
     "description": "获取早期构建者访问权限、硬件更新和发布通知。无需预订。",
     "placeholder": "输入您的电子邮箱",
     "button": "加入候补名单",
+    "success": "您已加入候补名单。我们将通过邮件发送早期构建者访问权限和发布更新。",
+    "invalidEmail": "请输入有效的电子邮箱地址。",
     "terms": "通过订阅，您同意我们的隐私政策和服务条款。"
   },
   "footer": {

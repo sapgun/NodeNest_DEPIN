@@ -112,6 +112,7 @@ export default function ProductGalleryEnhanced() {
                 <span>{t("products.standard.price")}</span>
                 <span className="ml-1 text-sm font-normal text-gray-400">{t("products.standard.priceLabel")}</span>
               </div>
+              <p className="mt-2 text-center text-xs text-gray-500">{t("products.waitlistNote")}</p>
               <ul className="mt-4 space-y-2 text-left">
                 <li className="flex items-start">
                   <Check className="mr-2 h-5 w-5 text-teal-500" />
@@ -162,6 +163,7 @@ export default function ProductGalleryEnhanced() {
                 <span>{t("products.plus.price")}</span>
                 <span className="ml-1 text-sm font-normal text-gray-400">{t("products.plus.priceLabel")}</span>
               </div>
+              <p className="mt-2 text-center text-xs text-gray-500">{t("products.waitlistNote")}</p>
               <ul className="mt-4 space-y-2 text-left">
                 <li className="flex items-start">
                   <Check className="mr-2 h-5 w-5 text-teal-500" />

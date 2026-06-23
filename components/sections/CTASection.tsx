@@ -1,15 +1,39 @@
 "use client"
 
+import { useState, type FormEvent } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Bell, Mail } from "lucide-react"
+import { Bell, CheckCircle2, Mail } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { useReducedMotion } from "@/lib/use-reduced-motion"
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export default function CTASection() {
   const { t } = useLanguage()
   const reducedMotion = useReducedMotion()
+  const [email, setEmail] = useState("")
+  const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setError(null)
+
+    if (!EMAIL_PATTERN.test(email.trim())) {
+      setError(t("newsletter.invalidEmail"))
+      return
+    }
+
+    try {
+      localStorage.setItem("nodenest-waitlist-email", email.trim())
+    } catch {
+      // localStorage may be unavailable in private browsing
+    }
+
+    setSubmitted(true)
+  }
 
   return (
     <section id="newsletter" aria-labelledby="waitlist-heading" className="bg-black py-24">
@@ -35,29 +59,51 @@ export default function CTASection() {
             <p className="text-gray-400">{t("newsletter.description")}</p>
           </motion.div>
 
-          <motion.form
-            initial={reducedMotion ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mx-auto flex max-w-md flex-col gap-2 sm:flex-row"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <div className="relative flex-1">
-              <Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" aria-hidden="true" />
-              <Input
-                type="email"
-                placeholder={t("newsletter.placeholder")}
-                aria-label={t("newsletter.placeholder")}
-                className="border-gray-700 bg-[#0c0f1a] pl-10 text-white placeholder:text-gray-500 focus:border-teal-500 focus:ring-teal-500"
-              />
+          {submitted ? (
+            <div
+              role="status"
+              className="mx-auto flex max-w-md items-center justify-center gap-2 rounded-lg border border-teal-500/30 bg-teal-500/10 px-4 py-3 text-sm text-teal-300"
+            >
+              <CheckCircle2 className="h-5 w-5 shrink-0" aria-hidden="true" />
+              <p>{t("newsletter.success")}</p>
             </div>
-            <motion.div whileHover={reducedMotion ? {} : { scale: 1.02 }} whileTap={reducedMotion ? {} : { scale: 0.98 }}>
-              <Button type="submit" className="w-full bg-teal-500 text-black hover:bg-teal-600 sm:w-auto">
-                {t("newsletter.button")}
-              </Button>
-            </motion.div>
-          </motion.form>
+          ) : (
+            <motion.form
+              initial={reducedMotion ? false : { opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="mx-auto flex max-w-md flex-col gap-2 sm:flex-row"
+              onSubmit={handleSubmit}
+              noValidate
+            >
+              <div className="relative flex-1">
+                <Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" aria-hidden="true" />
+                <Input
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={t("newsletter.placeholder")}
+                  aria-label={t("newsletter.placeholder")}
+                  aria-invalid={error ? true : undefined}
+                  aria-describedby={error ? "waitlist-error" : undefined}
+                  required
+                  className="border-gray-700 bg-[#0c0f1a] pl-10 text-white placeholder:text-gray-500 focus:border-teal-500 focus:ring-teal-500"
+                />
+              </div>
+              <motion.div whileHover={reducedMotion ? {} : { scale: 1.02 }} whileTap={reducedMotion ? {} : { scale: 0.98 }}>
+                <Button type="submit" className="w-full bg-teal-500 text-black hover:bg-teal-600 sm:w-auto">
+                  {t("newsletter.button")}
+                </Button>
+              </motion.div>
+              {error && (
+                <p id="waitlist-error" role="alert" className="w-full text-center text-sm text-red-400 sm:col-span-2">
+                  {error}
+                </p>
+              )}
+            </motion.form>
+          )}
 
           <motion.p
             initial={reducedMotion ? false : { opacity: 0, y: 20 }}

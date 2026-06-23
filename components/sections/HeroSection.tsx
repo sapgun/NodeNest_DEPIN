@@ -52,10 +52,28 @@ export default function HeroSection() {
               initial="hidden"
               animate="visible"
               variants={textVariants}
-              className="mb-10 text-lg text-gray-400"
+              className="mb-6 text-lg text-gray-400"
             >
               {t("hero.description")}
             </motion.p>
+
+            <motion.ul
+              custom={1.5}
+              initial="hidden"
+              animate="visible"
+              variants={textVariants}
+              className="mb-10 flex flex-wrap items-center justify-center gap-2 md:justify-start"
+              aria-label={t("hero.trust.label")}
+            >
+              {[t("hero.trust.edge"), t("hero.trust.multichain"), t("hero.trust.modular")].map((item) => (
+                <li
+                  key={item}
+                  className="rounded-full border border-gray-800 bg-[#0c0f1a] px-3 py-1 text-xs text-gray-400"
+                >
+                  {item}
+                </li>
+              ))}
+            </motion.ul>
 
             <motion.div
               custom={2}

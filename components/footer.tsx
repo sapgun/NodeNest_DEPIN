@@ -6,6 +6,28 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useLanguage } from "@/contexts/language-context"
+import { scrollToSection } from "@/lib/scroll-to"
+
+const productLinks = [
+  { key: "features", href: "#architecture" },
+  { key: "pricing", href: "#products" },
+  { key: "roadmap", href: "/community" },
+  { key: "documentation", href: "https://github.com/sapgun/NodeNest_DEPIN", external: true },
+] as const
+
+const communityLinks = [
+  { key: "discord", href: "#newsletter" },
+  { key: "forum", href: "/community" },
+  { key: "governance", href: "/community" },
+  { key: "events", href: "/community" },
+] as const
+
+const companyLinks = [
+  { key: "about", href: "#hero" },
+  { key: "careers", href: "#newsletter" },
+  { key: "blog", href: "/community" },
+  { key: "contact", href: "#newsletter" },
+] as const
 
 export default function Footer() {
   const { t } = useLanguage()
@@ -28,19 +50,36 @@ export default function Footer() {
             </div>
             <p className="mt-4 max-w-xs">{t("footer.tagline")}</p>
             <div className="mt-4 flex space-x-4">
-              <Link href="#" className="text-gray-400 transition-colors hover:text-teal-400" aria-label="Twitter">
+              <Link
+                href="/community"
+                className="text-gray-400 transition-colors hover:text-teal-400"
+                aria-label="Twitter"
+              >
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="text-gray-400 transition-colors hover:text-teal-400" aria-label="Discord">
+              <Link
+                href="#newsletter"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection("#newsletter")
+                }}
+                className="text-gray-400 transition-colors hover:text-teal-400"
+                aria-label="Discord"
+              >
                 <Discord className="h-5 w-5" />
                 <span className="sr-only">Discord</span>
               </Link>
-              <Link href="#" className="text-gray-400 transition-colors hover:text-teal-400" aria-label="GitHub">
+              <Link
+                href="https://github.com/sapgun/NodeNest_DEPIN"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 transition-colors hover:text-teal-400"
+                aria-label="GitHub"
+              >
                 <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
               </Link>
-              <Link href="#" className="text-gray-400 transition-colors hover:text-teal-400" aria-label="Website">
+              <Link href="/" className="text-gray-400 transition-colors hover:text-teal-400" aria-label="Website">
                 <Globe className="h-5 w-5" />
                 <span className="sr-only">Website</span>
               </Link>
@@ -50,11 +89,33 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase text-white">{t("footer.product.title")}</h3>
             <ul className="space-y-2">
-              {["features", "pricing", "roadmap", "documentation"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="transition-colors hover:text-teal-400">
-                    {t(`footer.product.${item}`)}
-                  </Link>
+              {productLinks.map((item) => (
+                <li key={item.key}>
+                  {"external" in item ? (
+                    <Link
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-colors hover:text-teal-400"
+                    >
+                      {t(`footer.product.${item.key}`)}
+                    </Link>
+                  ) : item.href.startsWith("#") ? (
+                    <a
+                      href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        scrollToSection(item.href)
+                      }}
+                      className="transition-colors hover:text-teal-400"
+                    >
+                      {t(`footer.product.${item.key}`)}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="transition-colors hover:text-teal-400">
+                      {t(`footer.product.${item.key}`)}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -63,26 +124,56 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase text-white">{t("footer.community.title")}</h3>
             <ul className="space-y-2">
-              {["discord", "forum", "governance", "events"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="transition-colors hover:text-teal-400">
-                    {t(`footer.community.${item}`)}
-                  </Link>
-                </li>
-              ))}
+              {communityLinks.map((item) =>
+                item.href.startsWith("#") ? (
+                  <li key={item.key}>
+                    <a
+                      href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        scrollToSection(item.href)
+                      }}
+                      className="transition-colors hover:text-teal-400"
+                    >
+                      {t(`footer.community.${item.key}`)}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={item.key}>
+                    <Link href={item.href} className="transition-colors hover:text-teal-400">
+                      {t(`footer.community.${item.key}`)}
+                    </Link>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
 
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase text-white">{t("footer.company.title")}</h3>
             <ul className="space-y-2">
-              {["about", "careers", "blog", "contact"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="transition-colors hover:text-teal-400">
-                    {t(`footer.company.${item}`)}
-                  </Link>
-                </li>
-              ))}
+              {companyLinks.map((item) =>
+                item.href.startsWith("#") ? (
+                  <li key={item.key}>
+                    <a
+                      href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        scrollToSection(item.href)
+                      }}
+                      className="transition-colors hover:text-teal-400"
+                    >
+                      {t(`footer.company.${item.key}`)}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={item.key}>
+                    <Link href={item.href} className="transition-colors hover:text-teal-400">
+                      {t(`footer.company.${item.key}`)}
+                    </Link>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
         </div>
@@ -102,7 +193,12 @@ export default function Footer() {
                     aria-label={t("footer.newsletter.placeholder")}
                   />
                 </div>
-                <Button className="bg-teal-500 text-black hover:bg-teal-600">{t("footer.newsletter.button")}</Button>
+                <Button
+                  className="bg-teal-500 text-black hover:bg-teal-600"
+                  onClick={() => scrollToSection("#newsletter")}
+                >
+                  {t("footer.newsletter.button")}
+                </Button>
               </div>
             </div>
           </div>

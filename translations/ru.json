@@ -19,7 +19,13 @@
     "learnMore": "Узнать больше",
     "joinWaitlist": "В лист ожидания",
     "viewArchitecture": "Смотреть архитектуру",
-    "followBuildLog": "Следить за build log"
+    "followBuildLog": "Следить за build log",
+    "trust": {
+      "label": "Возможности NodeNest",
+      "edge": "Edge-native железо",
+      "multichain": "Multi-chain ready",
+      "modular": "Модульный стек"
+    }
   },
   "modularStack": {
     "title": "Модульный Edge-стек",
@@ -104,7 +110,8 @@
       "title": "NodeNest Плюс Издание",
       "subtitle": "Доступно в нескольких цветах"
     },
-    "joinWaitlist": "В лист ожидания"
+    "joinWaitlist": "В лист ожидания",
+    "waitlistNote": "Цена раннего доступа — запишитесь в лист ожидания"
   },
   "dashboard": {
     "title": "Панель управления в реальном времени",
@@ -253,6 +260,8 @@
     "description": "Ранний доступ для builders, обновления железа и уведомления о запуске. Без предзаказа.",
     "placeholder": "Введите ваш email",
     "button": "В лист ожидания",
+    "success": "Вы в листе ожидания. Мы отправим вам ранний доступ для builders и новости о запуске.",
+    "invalidEmail": "Введите корректный адрес электронной почты.",
     "terms": "Подписываясь, вы соглашаетесь с нашей Политикой конфиденциальности и Условиями использования."
   },
   "footer": {

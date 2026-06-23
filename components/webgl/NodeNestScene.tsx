@@ -1,7 +1,7 @@
 "use client"
 
 import { Suspense, useEffect } from "react"
-import { Canvas } from "@react-three/fiber"
+import { Canvas, useThree } from "@react-three/fiber"
 import { Environment, Preload } from "@react-three/drei"
 import DeviceModel from "./DeviceModel"
 import NetworkParticles from "./NetworkParticles"
@@ -14,31 +14,42 @@ interface NodeNestSceneProps {
   onError?: () => void
 }
 
-function SceneReadyNotifier({ onReady }: { onReady?: () => void }) {
+function SceneReadyNotifier({
+  onReady,
+  isMobile,
+}: {
+  onReady?: () => void
+  isMobile?: boolean
+}) {
+  const invalidate = useThree((state) => state.invalidate)
+
   useEffect(() => {
     onReady?.()
-  }, [onReady])
+    if (isMobile) invalidate()
+  }, [onReady, isMobile, invalidate])
 
   return null
 }
 
 function SceneContent({ reducedMotion, isMobile }: Pick<NodeNestSceneProps, "reducedMotion" | "isMobile">) {
-  const particleCount = isMobile ? 40 : 100
+  const particleCount = isMobile ? 35 : 90
 
   return (
     <>
-      <ambientLight intensity={0.35} />
-      <directionalLight position={[4, 6, 4]} intensity={0.8} color="#ffffff" />
-      <directionalLight position={[-3, 2, -2]} intensity={0.3} color="#14b8a6" />
-      <pointLight position={[0, 2, 3]} intensity={0.5} color="#22d3ee" distance={8} />
+      <ambientLight intensity={isMobile ? 0.45 : 0.35} />
+      <directionalLight position={[4, 6, 4]} intensity={isMobile ? 0.65 : 0.8} color="#ffffff" />
+      <directionalLight position={[-3, 2, -2]} intensity={0.25} color="#14b8a6" />
+      {!isMobile && (
+        <pointLight position={[0, 2, 3]} intensity={0.5} color="#22d3ee" distance={8} />
+      )}
 
       <ScrollCameraRig reducedMotion={reducedMotion}>
         <DeviceModel reducedMotion={reducedMotion} />
         <NetworkParticles count={particleCount} reducedMotion={reducedMotion} />
       </ScrollCameraRig>
 
-      <Environment preset="city" />
-      <Preload all />
+      {!isMobile && <Environment preset="city" />}
+      {!isMobile && <Preload all />}
     </>
   )
 }
@@ -51,8 +62,10 @@ export default function NodeNestScene({
 }: NodeNestSceneProps) {
   return (
     <Canvas
-      camera={{ position: [0, 1.2, 6], fov: 42 }}
+      camera={{ position: [0, 1.2, 6], fov: isMobile ? 44 : 42 }}
       dpr={isMobile ? [1, 1] : [1, 1.5]}
+      frameloop={isMobile ? "demand" : "always"}
+      performance={{ min: 0.5 }}
       gl={{
         antialias: !isMobile,
         alpha: true,
@@ -67,7 +80,7 @@ export default function NodeNestScene({
       }}
     >
       <Suspense fallback={null}>
-        <SceneReadyNotifier onReady={onReady} />
+        <SceneReadyNotifier onReady={onReady} isMobile={isMobile} />
         <SceneContent reducedMotion={reducedMotion} isMobile={isMobile} />
       </Suspense>
     </Canvas>
