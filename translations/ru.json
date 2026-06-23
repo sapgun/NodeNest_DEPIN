@@ -70,6 +70,41 @@
         "title": "Автоматические обновления",
         "description": "Обновления программного обеспечения применяются автоматически для бесперебойной работы узлов"
       }
+    },
+    "ui": {
+      "sidebar": {
+        "dashboard": "Панель",
+        "rewards": "Награды",
+        "scheduler": "Планировщик",
+        "nodes": "Узлы",
+        "settings": "Настройки",
+        "help": "Помощь"
+      },
+      "overview": {
+        "activeNodes": "Активные узлы",
+        "totalTasks": "Всего задач",
+        "monthEarnings": "Доход за месяц",
+        "uptime": "Время работы",
+        "nodeOverview": "Обзор узлов",
+        "earnings": "Доход",
+        "edgeNode": "Пограничный узел",
+        "status": "Статус",
+        "online": "Онлайн",
+        "monthlyRewards": "Месячные награды"
+      },
+      "rewards": {
+        "title": "Награды",
+        "earningsHistory": "История доходов",
+        "activity": "Активность",
+        "period1M": "1М"
+      },
+      "nodes": {
+        "title": "Узлы",
+        "network": "Сеть",
+        "sync": "Синхронизация",
+        "running": "Работает",
+        "syncing": "Синхронизация"
+      }
     }
   },
   "devices": {

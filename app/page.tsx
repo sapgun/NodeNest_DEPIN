@@ -1,24 +1,22 @@
 import Navbar from "@/components/navbar"
-import Hero from "@/components/hero"
-import ProductGalleryEnhanced from "@/components/product-gallery-enhanced"
-import Dashboard from "@/components/dashboard"
+import HeroSection from "@/components/sections/HeroSection"
+import ModularStackSection from "@/components/sections/ModularStackSection"
+import NetworkLayerSection from "@/components/sections/NetworkLayerSection"
 import DeviceShowcase from "@/components/device-showcase"
-import RewardsSection from "@/components/rewards-section"
-import HowItWorks from "@/components/how-it-works"
-import Newsletter from "@/components/newsletter"
+import RewardsFlowSection from "@/components/sections/RewardsFlowSection"
+import CTASection from "@/components/sections/CTASection"
 import Footer from "@/components/footer"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
       <Navbar />
-      <Hero />
-      <ProductGalleryEnhanced />
-      <Dashboard />
+      <HeroSection />
+      <ModularStackSection />
+      <NetworkLayerSection />
       <DeviceShowcase />
-      <RewardsSection />
-      <HowItWorks />
-      <Newsletter />
+      <RewardsFlowSection />
+      <CTASection />
       <Footer />
     </main>
   )

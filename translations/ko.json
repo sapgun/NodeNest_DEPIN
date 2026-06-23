@@ -70,6 +70,41 @@
         "title": "자동 업데이트",
         "description": "소프트웨어 업데이트가 자동으로 적용되어 노드가 원활하게 실행됩니다"
       }
+    },
+    "ui": {
+      "sidebar": {
+        "dashboard": "대시보드",
+        "rewards": "리워드",
+        "scheduler": "스케줄러",
+        "nodes": "노드",
+        "settings": "설정",
+        "help": "도움말"
+      },
+      "overview": {
+        "activeNodes": "활성 노드",
+        "totalTasks": "총 작업",
+        "monthEarnings": "월간 수익",
+        "uptime": "가동 시간",
+        "nodeOverview": "노드 개요",
+        "earnings": "수익",
+        "edgeNode": "엣지 노드",
+        "status": "상태",
+        "online": "온라인",
+        "monthlyRewards": "월간 리워드"
+      },
+      "rewards": {
+        "title": "리워드",
+        "earningsHistory": "수익 기록",
+        "activity": "활동",
+        "period1M": "1개월"
+      },
+      "nodes": {
+        "title": "노드",
+        "network": "네트워크",
+        "sync": "동기화",
+        "running": "실행 중",
+        "syncing": "동기화 중"
+      }
     }
   },
   "devices": {

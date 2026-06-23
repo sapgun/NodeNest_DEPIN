@@ -1,80 +1,22 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { DollarSign, Check, Loader2 } from "lucide-react"
+import { DollarSign, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
-import type { ProductImage } from "@/lib/product-images"
+import { initialProductImages } from "@/lib/product-images"
 
 export default function ProductGalleryEnhanced() {
   const { t } = useLanguage()
-  const [images, setImages] = useState<ProductImage[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [activeImage, setActiveImage] = useState<string | null>(null)
+  const images = initialProductImages
+  const [activeImage, setActiveImage] = useState(images[0]?.id ?? null)
 
-  useEffect(() => {
-    async function fetchProductImages() {
-      try {
-        setLoading(true)
-        const response = await fetch("/api/product-images")
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch product images")
-        }
-
-        const data = await response.json()
-        setImages(data.images)
-
-        // 첫 번째 이미지를 활성 이미지로 설정
-        if (data.images.length > 0) {
-          setActiveImage(data.images[0].id)
-        }
-      } catch (err) {
-        console.error("Error fetching product images:", err)
-        setError("Failed to load product images")
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchProductImages()
-  }, [])
-
-  // 카테고리별 이미지 필터링
   const standardImages = images.filter((img) => img.category === "standard")
   const plusImages = images.filter((img) => img.category === "plus")
   const colorImages = images.filter((img) => img.category === "colors")
-
-  // 활성 이미지 찾기
   const activeImageData = images.find((img) => img.id === activeImage)
-
-  if (loading) {
-    return (
-      <section id="products" className="bg-[#0c0f1a] py-24">
-        <div className="container mx-auto px-4">
-          <div className="flex h-96 items-center justify-center">
-            <Loader2 className="h-8 w-8 animate-spin text-teal-500" />
-            <span className="ml-2 text-gray-400">Loading product gallery...</span>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  if (error) {
-    return (
-      <section id="products" className="bg-[#0c0f1a] py-24">
-        <div className="container mx-auto px-4">
-          <div className="flex h-96 items-center justify-center">
-            <p className="text-red-500">{error}</p>
-          </div>
-        </div>
-      </section>
-    )
-  }
 
   return (
     <section id="products" className="bg-[#0c0f1a] py-24">
@@ -90,7 +32,6 @@ export default function ProductGalleryEnhanced() {
           <p className="mx-auto max-w-2xl text-gray-400">{t("products.description")}</p>
         </motion.div>
 
-        {/* 메인 이미지 갤러리 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +42,7 @@ export default function ProductGalleryEnhanced() {
           {activeImageData && (
             <div className="flex items-center justify-center">
               <Image
-                src={activeImageData.url || "/placeholder.svg"}
+                src={activeImageData.url}
                 alt={activeImageData.alt}
                 width={1000}
                 height={600}
@@ -112,15 +53,17 @@ export default function ProductGalleryEnhanced() {
           )}
         </motion.div>
 
-        {/* 썸네일 갤러리 */}
         <div className="mb-16 flex flex-wrap items-center justify-center gap-4">
           {images.map((image) => (
-            <motion.div
+            <motion.button
               key={image.id}
+              type="button"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3 }}
+              aria-label={image.alt}
+              aria-pressed={activeImage === image.id}
               className={`cursor-pointer overflow-hidden rounded-lg border-2 transition-all duration-200 ${
                 activeImage === image.id
                   ? "border-teal-500 shadow-lg shadow-teal-500/20"
@@ -129,14 +72,14 @@ export default function ProductGalleryEnhanced() {
               onClick={() => setActiveImage(image.id)}
             >
               <Image
-                src={image.url || "/placeholder.svg"}
+                src={image.url}
                 alt={image.alt}
                 width={120}
                 height={120}
                 className="h-20 w-20 object-cover"
                 unoptimized
               />
-            </motion.div>
+            </motion.button>
           ))}
         </div>
 
@@ -151,7 +94,7 @@ export default function ProductGalleryEnhanced() {
             <div className="mb-4 flex items-center justify-center">
               {standardImages.length > 0 && (
                 <Image
-                  src={standardImages[0].url || "/placeholder.svg"}
+                  src={standardImages[0].url}
                   alt={standardImages[0].alt}
                   width={400}
                   height={400}
@@ -198,7 +141,7 @@ export default function ProductGalleryEnhanced() {
             <div className="mb-4 flex items-center justify-center">
               {plusImages.length > 0 && (
                 <Image
-                  src={plusImages[0].url || "/placeholder.svg"}
+                  src={plusImages[0].url}
                   alt={plusImages[0].alt}
                   width={400}
                   height={400}
@@ -250,7 +193,7 @@ export default function ProductGalleryEnhanced() {
           <div className="mb-4 flex items-center justify-center">
             {colorImages.length > 0 && (
               <Image
-                src={colorImages[0].url || "/placeholder.svg"}
+                src={colorImages[0].url}
                 alt={colorImages[0].alt}
                 width={1000}
                 height={400}

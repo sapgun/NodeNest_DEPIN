@@ -70,6 +70,41 @@
         "title": "Automated Updates",
         "description": "Software updates are automatically applied to keep your nodes running smoothly"
       }
+    },
+    "ui": {
+      "sidebar": {
+        "dashboard": "Dashboard",
+        "rewards": "Rewards",
+        "scheduler": "Scheduler",
+        "nodes": "Nodes",
+        "settings": "Settings",
+        "help": "Help"
+      },
+      "overview": {
+        "activeNodes": "Active Nodes",
+        "totalTasks": "Total Tasks",
+        "monthEarnings": "Month to Date Earnings",
+        "uptime": "Uptime",
+        "nodeOverview": "Node Overview",
+        "earnings": "Earnings",
+        "edgeNode": "Edge Node",
+        "status": "Status",
+        "online": "Online",
+        "monthlyRewards": "Monthly Rewards"
+      },
+      "rewards": {
+        "title": "Rewards",
+        "earningsHistory": "Earnings History",
+        "activity": "Activity",
+        "period1M": "1M"
+      },
+      "nodes": {
+        "title": "Nodes",
+        "network": "Network",
+        "sync": "Sync",
+        "running": "Running",
+        "syncing": "Syncing"
+      }
     }
   },
   "devices": {

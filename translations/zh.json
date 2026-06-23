@@ -70,6 +70,41 @@
         "title": "自动更新",
         "description": "自动应用软件更新，保持节点平稳运行"
       }
+    },
+    "ui": {
+      "sidebar": {
+        "dashboard": "仪表板",
+        "rewards": "奖励",
+        "scheduler": "调度器",
+        "nodes": "节点",
+        "settings": "设置",
+        "help": "帮助"
+      },
+      "overview": {
+        "activeNodes": "活跃节点",
+        "totalTasks": "总任务",
+        "monthEarnings": "本月收益",
+        "uptime": "运行时间",
+        "nodeOverview": "节点概览",
+        "earnings": "收益",
+        "edgeNode": "边缘节点",
+        "status": "状态",
+        "online": "在线",
+        "monthlyRewards": "月度奖励"
+      },
+      "rewards": {
+        "title": "奖励",
+        "earningsHistory": "收益历史",
+        "activity": "活动",
+        "period1M": "1个月"
+      },
+      "nodes": {
+        "title": "节点",
+        "network": "网络",
+        "sync": "同步",
+        "running": "运行中",
+        "syncing": "同步中"
+      }
     }
   },
   "devices": {

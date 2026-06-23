@@ -70,6 +70,41 @@
         "title": "Actualizaciones automáticas",
         "description": "Las actualizaciones de software se aplican automáticamente para mantener tus nodos funcionando sin problemas"
       }
+    },
+    "ui": {
+      "sidebar": {
+        "dashboard": "Panel",
+        "rewards": "Recompensas",
+        "scheduler": "Programador",
+        "nodes": "Nodos",
+        "settings": "Ajustes",
+        "help": "Ayuda"
+      },
+      "overview": {
+        "activeNodes": "Nodos activos",
+        "totalTasks": "Tareas totales",
+        "monthEarnings": "Ganancias del mes",
+        "uptime": "Tiempo activo",
+        "nodeOverview": "Resumen de nodos",
+        "earnings": "Ganancias",
+        "edgeNode": "Nodo edge",
+        "status": "Estado",
+        "online": "En línea",
+        "monthlyRewards": "Recompensas mensuales"
+      },
+      "rewards": {
+        "title": "Recompensas",
+        "earningsHistory": "Historial de ganancias",
+        "activity": "Actividad",
+        "period1M": "1M"
+      },
+      "nodes": {
+        "title": "Nodos",
+        "network": "Red",
+        "sync": "Sincronización",
+        "running": "En ejecución",
+        "syncing": "Sincronizando"
+      }
     }
   },
   "devices": {
